@@ -1,0 +1,45 @@
+# 核心依赖（跨平台，CPU / Apple Silicon / CUDA 均可安装）
+#   pip install -r requirements.txt
+#
+# GPU 上跑 flash_attention_2 / Qwen3.5 线性注意力算子，还需额外装：
+#   pip install -r requirements-cuda.txt
+#
+# torch 默认装 PyPI 版：macOS 为 MPS/CPU 版，Linux 为 CUDA 版。
+# 需要指定 CUDA 版本时改用官方源，例如：
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+#
+# 已验证组合（macOS 15 / Apple Silicon / Python 3.13）：
+#   torch 2.13.0、torchvision 0.28.0、transformers 5.15.1、accelerate 1.14.0、
+#   datasets 5.0.1、numpy 2.5.2、scikit-learn 1.9.0、pillow 12.3.0、
+#   safetensors 0.8.0、sentencepiece 0.2.2、protobuf 7.36.0、tqdm 4.70.0
+
+# 推理主框架。模型代码直接 import transformers 内部模块
+# （transformers.initialization / vision_utils / utils.output_capturing /
+#  integrations.use_kernelized_func / models.qwen3_5），这些路径为 5.x 引入，
+# 且需自带 Qwen3.5 与 Qwen3-VL 实现，故要求 5.x。
+transformers>=5.0.0
+torch>=2.6.0
+torchvision>=0.21.0
+
+# from_pretrained(device_map="auto") 的分片加载依赖
+accelerate>=1.0.0
+
+# 权重下载（download_weights.py / dataset/download.py）与 safetensors 读取
+huggingface_hub>=1.0.0
+safetensors>=0.4.0
+
+# tokenizer / processor
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+
+# 数据处理：dataset/*/test.py 用 datasets 加载基准集，
+# needle/get_dataset.py 用 sklearn 划分数据，modify_qwen3_vl.py 用 numpy
+datasets>=3.0.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+
+# 多模态图像读取（Qwen3-VL processor）
+pillow>=10.0.0
+
+# main.py 进度条
+tqdm>=4.66.0

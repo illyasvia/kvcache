@@ -1,0 +1,23 @@
+# 仅 Linux + NVIDIA GPU 可用的加速/量化算子。macOS、纯 CPU 环境装不上，也不需要。
+# 先装好 requirements.txt（尤其是 torch），再执行：
+#   pip install -r requirements-cuda.txt
+#
+# flash-attn 需要本机 CUDA toolkit 与 nvcc 编译，若编译慢可加 --no-build-isolation。
+
+# Qwen35.py / Qwen3_vl.py 均以 attn_implementation="flash_attention_2" 加载模型；
+# modify_*.py 通过 is_flash_attn_2_available() 判断是否启用 _flash_attention_forward
+flash-attn>=2.6.0
+
+# v451_modeling_qwen35.py 的 Qwen3.5 线性注意力分支：
+# is_causal_conv1d_available() -> causal_conv1d_fn / causal_conv1d_update
+causal-conv1d>=1.4.0
+
+# is_flash_linear_attention_available() -> fla.modules.FusedRMSNormGated、
+# fla.ops.gated_delta_rule 的 chunk / fused_recurrent_gated_delta_rule
+flash-linear-attention>=0.1.0
+
+# Qwen35.py 中的 BitsAndBytesConfig 4bit 量化（当前 from_pretrained 里被注释，按需启用）
+bitsandbytes>=0.43.0
+
+# transformers 从 Hub 拉取融合算子（use_kernel_forward_from_hub / use_kernelized_func）
+kernels>=0.4.0

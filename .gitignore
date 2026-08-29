@@ -1,0 +1,23 @@
+# Python 字节码
+__pycache__/
+*.py[cod]
+
+# 虚拟环境（1.2G，按 requirements.txt 重建）
+.venv/
+
+# PyCharm 本地状态
+.idea/
+
+# HuggingFace 下载缓存；*.incomplete 是中断下载留下的残片，不可用
+.cache/
+*.incomplete
+
+# 模型权重：单个 safetensors 分片 3.9~5.3G，超过远端 3.22G/对象的上限，无法入库。
+# 用 download_weights.py 重新拉取。
+weight/
+
+# 评测运行产物
+output/
+
+# macOS
+.DS_Store

@@ -1,0 +1,3705 @@
+{
+    "meta_data": {
+        "dataset": "alfred",
+        "split": "v1",
+        "num_sample": 200,
+        "task_instruction": [
+            "Give you a main goal, your job is to figure out what to do now by looking at current envirments. Your past views as well as decisions are also provided.",
+            "Given a primary objective and your current surroundings, use your previous decisions and perspectives to determine your next move.",
+            "Using the final goal as your guide, reflect on your past successful strategies as a smart agent. Observe the information in the image to inform your present decision.",
+            "As an intelligent entity, consider your past correct actions and aim for the ultimate goal. Now, examine the data within the picture to decide your immediate action.",
+            "You are an intelligent agent who has made smart decisions in the past. To achieve the end goal, scrutinize the image's details and contemplate your immediate action.",
+            "Given your past actions and the main goal, analyze your current environment. Decide your next step based on this analysis.",
+            "Your ultimate task is to reach the main goal. Reflect on your past decisions, consider your current surroundings, and determine your immediate action.",
+            "You are a smart agent aiming to reach a final goal. Consider your successful decisions from past rounds and the current situation presented in the image. What would be your next move?",
+            "As an intelligent entity, you are tasked with reaching the main goal. Utilizing your past decisions and the information in the picture, contemplate your next action.",
+            "Your objective is the main goal. Evaluate your current environment and your past decisions, and decide your immediate course of action."
+        ],
+        "question_type": "open-ended"
+    },
+    "data": [
+        {
+            "sample_id": 0,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a warm slice of bread on the counter.   Step Details: {image#1}Step#1: Turn around and walk to the counter top above the dishwasher, just past the refrigerator.  {image#2}Step#2: Pick up the loaf of bread to the right of the toaster.  {image#3}Step#3: Move over to your right so that you are directly in front of the knife's on the counter.  {image#4}Step#4: Place the bread on the counter to the left of the knife's.  {image#5} Current Step: ",
+                "images_path": [
+                    "0.jpg",
+                    "1.jpg",
+                    "2.jpg",
+                    "3.jpg",
+                    "4.jpg"
+                ],
+                "combined_1_images": [
+                    "0.jpg"
+                ]
+            },
+            "response": "Pick up the knife closest to the fork on the right, located on the counter. ",
+            "old_sample_id": 76,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 1,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  put a chilled, cut slice of lettuce in the sink  Step Details: {image#1}Step#1: go to the counter to the left of the sink {image#2}Step#2: pick up the knife {image#3}Step#3: take the knife to the table {image#4} Current Step: ",
+                "images_path": [
+                    "5.jpg",
+                    "6.jpg",
+                    "7.jpg",
+                    "8.jpg"
+                ],
+                "combined_1_images": [
+                    "1.jpg"
+                ]
+            },
+            "response": "cut the head of lettuce on the table",
+            "old_sample_id": 489,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 2,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a spray bottle on top of the toilet's water tank.  Step Details: {image#1}Step#1: Turn around and head to the end of the sink counter on your right. {image#2}Step#2: Pick up the spray bottle sitting on the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "9.jpg",
+                    "10.jpg",
+                    "11.jpg"
+                ],
+                "combined_1_images": [
+                    "2.jpg"
+                ]
+            },
+            "response": "Turn around and face the toilet behind you.",
+            "old_sample_id": 725,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 3,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cold mug in the cupboard.  Step Details: {image#1}Step#1: Turn left and walk to the window then turn left and walk to the coffee maker. {image#2} Current Step: ",
+                "images_path": [
+                    "12.jpg",
+                    "13.jpg"
+                ],
+                "combined_1_images": [
+                    "3.jpg"
+                ]
+            },
+            "response": "Pick up the mug that's in front of you at the coffee maker.",
+            "old_sample_id": 2492,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 4,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two boxes of tissue from counter to back of toilet.  Step Details: {image#1}Step#1: Proceed to counter in front of tissue boxes. {image#2}Step#2: Pick up middle tissue box from counter. {image#3}Step#3: Turn around, go to counter toilet. {image#4} Current Step: ",
+                "images_path": [
+                    "14.jpg",
+                    "15.jpg",
+                    "16.jpg",
+                    "17.jpg"
+                ],
+                "combined_1_images": [
+                    "4.jpg"
+                ]
+            },
+            "response": "Place tissue box on back of toilet, in front of candle stick.",
+            "old_sample_id": 3240,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 5,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  take the mug from the desk shelf to put it on the desk.  Step Details: {image#1}Step#1: walk around to the desk and face the middle row of books {image#2} Current Step: ",
+                "images_path": [
+                    "18.jpg",
+                    "19.jpg"
+                ],
+                "combined_1_images": [
+                    "5.jpg"
+                ]
+            },
+            "response": "Pick up the white mug from the top shelf",
+            "old_sample_id": 4816,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 6,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cup with a fork in the sink.  Step Details: {image#1}Step#1: Move to the sink to the right of the fridge. {image#2}Step#2: Pick up the fork from the sink. {image#3}Step#3: Turn around to the counter behind you. {image#4}Step#4: Place the fork in the cup on the counter. {image#5} Current Step: ",
+                "images_path": [
+                    "20.jpg",
+                    "21.jpg",
+                    "22.jpg",
+                    "23.jpg",
+                    "24.jpg"
+                ],
+                "combined_1_images": [
+                    "6.jpg"
+                ]
+            },
+            "response": "Pick up the cup from the counter.",
+            "old_sample_id": 5026,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 7,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Examine a phone by the light of the lamp in the corner.   Step Details: {image#1}Step#1: Head to the long black table on the left in the corner.  {image#2}Step#2: Pick up the phone on the table.  {image#3} Current Step: ",
+                "images_path": [
+                    "25.jpg",
+                    "26.jpg",
+                    "27.jpg"
+                ],
+                "combined_1_images": [
+                    "7.jpg"
+                ]
+            },
+            "response": "Turn around, bring the phone to the lamp in the corner.",
+            "old_sample_id": 6739,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 8,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a chilled pot to the round table in the corner.   Step Details: {image#1}Step#1: Turn and go to the stove. {image#2}Step#2: Pick up a pot on the stove.  {image#3} Current Step: ",
+                "images_path": [
+                    "28.jpg",
+                    "29.jpg",
+                    "30.jpg"
+                ],
+                "combined_1_images": [
+                    "8.jpg"
+                ]
+            },
+            "response": "Turn and go to the refrigerator.",
+            "old_sample_id": 7601,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 9,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a rinsed ladle on the counter.  Step Details: {image#1}Step#1: Turn left and move to the end of the counter in front of the two yellow chairs. {image#2}Step#2: Pick up the blue handled ladle to the left of the gray mug from the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "31.jpg",
+                    "32.jpg",
+                    "33.jpg"
+                ],
+                "combined_1_images": [
+                    "9.jpg"
+                ]
+            },
+            "response": "Turn right and move to the sink to the left of the coffee maker and in front of the window .",
+            "old_sample_id": 9280,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 10,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a chilled pan on a table.  Step Details: {image#1}Step#1: Turn around and cross the room to stand in front of the stove. {image#2}Step#2: Pick the pan from the bottom left of the stove up. {image#3} Current Step: ",
+                "images_path": [
+                    "34.jpg",
+                    "35.jpg",
+                    "36.jpg"
+                ],
+                "combined_1_images": [
+                    "10.jpg"
+                ]
+            },
+            "response": "Go left and then left to face the fridge.",
+            "old_sample_id": 9734,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 11,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Place the lettuce by the toaster.   Step Details: {image#1}Step#1: Walk to the left end of the white table.  {image#2}Step#2: Pick up the lettuce off of the table.  {image#3}Step#3: Walk to the fridge.  {image#4}Step#4: Place the lettuce on the second shelf in the fridge for a few seconds, take the lettuce back out. {image#5} Current Step: ",
+                "images_path": [
+                    "37.jpg",
+                    "38.jpg",
+                    "39.jpg",
+                    "40.jpg",
+                    "41.jpg"
+                ],
+                "combined_1_images": [
+                    "11.jpg"
+                ]
+            },
+            "response": "Turn right, walk to the sink. ",
+            "old_sample_id": 10233,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 12,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Examine a book by the light of a small lamp.  Step Details: {image#1}Step#1: Turn around and walk to the wooden nightstand next to the bed. {image#2}Step#2: Pick up the book from the back of the nightstand. {image#3} Current Step: ",
+                "images_path": [
+                    "42.jpg",
+                    "43.jpg",
+                    "44.jpg"
+                ],
+                "combined_1_images": [
+                    "12.jpg"
+                ]
+            },
+            "response": "Turn left and walk to the nightstand with the small lamp against the wall.",
+            "old_sample_id": 10896,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 13,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Throw away a heated potato.  Step Details: {image#1}Step#1: Turn left and stand to the left of the coffee maker. {image#2}Step#2: Pick up the potato from the counter. {image#3}Step#3: Move to the right and stand in front of the microwave. {image#4} Current Step: ",
+                "images_path": [
+                    "45.jpg",
+                    "46.jpg",
+                    "47.jpg",
+                    "48.jpg"
+                ],
+                "combined_1_images": [
+                    "13.jpg"
+                ]
+            },
+            "response": "Heat the potato in the microwave and take it out.",
+            "old_sample_id": 11793,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 14,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cleaned apple in the microwave  Step Details: {image#1}Step#1: Turn around and go to the trash can to the left of the stove {image#2}Step#2: Pick up the apple from the trash can {image#3}Step#3: Turn right and go to the sink on the left {image#4} Current Step: ",
+                "images_path": [
+                    "49.jpg",
+                    "50.jpg",
+                    "51.jpg",
+                    "52.jpg"
+                ],
+                "combined_1_images": [
+                    "14.jpg"
+                ]
+            },
+            "response": "Put the apple in the sink and turn on the water. Turn off the water and take the apple out of the sink",
+            "old_sample_id": 12219,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 15,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a mug with a pen in it on the desk.  Step Details: {image#1}Step#1: Turn around to face the desk. {image#2}Step#2: Pick up the pen on the desk, to the right of the mug {image#3} Current Step: ",
+                "images_path": [
+                    "53.jpg",
+                    "54.jpg",
+                    "55.jpg"
+                ],
+                "combined_1_images": [
+                    "15.jpg"
+                ]
+            },
+            "response": "Turn left, move forward, and turn right to face the desk again.",
+            "old_sample_id": 12436,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 16,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  put an empty roll and a full roll of toilet paper on the toilet tank  Step Details: {image#1}Step#1: go to the sink in front of you {image#2} Current Step: ",
+                "images_path": [
+                    "56.jpg",
+                    "57.jpg"
+                ],
+                "combined_1_images": [
+                    "16.jpg"
+                ]
+            },
+            "response": "pick up the brown paper roll",
+            "old_sample_id": 13568,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 17,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cold mug at the coffee maker.  Step Details: {image#1}Step#1: Turn right and go straight, then go to the microwave, then turn left and go to the coffee maker. {image#2} Current Step: ",
+                "images_path": [
+                    "58.jpg",
+                    "59.jpg"
+                ],
+                "combined_1_images": [
+                    "17.jpg"
+                ]
+            },
+            "response": "Pick up the mug on the counter, to the right of the coffee maker.",
+            "old_sample_id": 14460,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 18,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  put a washed handkerchief into a bath tub  Step Details: {image#1}Step#1: walk to face counter top to the left of the sink {image#2}Step#2: pick up the red handkerchief from the counter top {image#3}Step#3: walk right to face the sink {image#4} Current Step: ",
+                "images_path": [
+                    "60.jpg",
+                    "61.jpg",
+                    "62.jpg",
+                    "63.jpg"
+                ],
+                "combined_1_images": [
+                    "18.jpg"
+                ]
+            },
+            "response": "wash the handkerchief in the sink, pick up handkerchief from sink",
+            "old_sample_id": 14637,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 19,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a mug with a pencil in it on the dresser.  Step Details: {image#1}Step#1: Take a step to your right. {image#2}Step#2: Pick up the pen that's in front of you that's under the mug. {image#3}Step#3: Put the pencil in the mug that was above it. {image#4} Current Step: ",
+                "images_path": [
+                    "64.jpg",
+                    "65.jpg",
+                    "66.jpg",
+                    "67.jpg"
+                ],
+                "combined_1_images": [
+                    "19.jpg"
+                ]
+            },
+            "response": "Pick up the mug with the pencil in it.",
+            "old_sample_id": 16316,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 20,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Put two pencils on the hutch shelf, one horizontal and one vertical.  Step Details: {image#1}Step#1: Turn right for one step, turn left to face the desk. {image#2} Current Step: ",
+                "images_path": [
+                    "68.jpg",
+                    "69.jpg"
+                ],
+                "combined_1_images": [
+                    "20.jpg"
+                ]
+            },
+            "response": "Pick up the pencil sitting on the desk to the right of the chair.",
+            "old_sample_id": 16751,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 21,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put bread in a microwave.  Step Details: {image#1}Step#1: Turn around, go straight all the way, turn right to face the counter. {image#2}Step#2: Take the bread from the counter on the left. {image#3} Current Step: ",
+                "images_path": [
+                    "70.jpg",
+                    "71.jpg",
+                    "72.jpg"
+                ],
+                "combined_1_images": [
+                    "21.jpg"
+                ]
+            },
+            "response": "Turn around, go straight and stop at the oven, turn right to face the oven.",
+            "old_sample_id": 17282,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 22,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Move the newspapers to the chair.  Step Details: {image#1}Step#1: Go around the couch to stand between the chairs and the coffee table, then turn right and face the coffee table. {image#2}Step#2: Pick up the newspaper that's on the edge of the coffee table. {image#3} Current Step: ",
+                "images_path": [
+                    "73.jpg",
+                    "74.jpg",
+                    "75.jpg"
+                ],
+                "combined_1_images": [
+                    "22.jpg"
+                ]
+            },
+            "response": "Turn around with the newspaper and look at the seat of the chair on the right.",
+            "old_sample_id": 17365,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 23,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a plate and knife to the sink.  Step Details: {image#1}Step#1: Move a step forward to the stove. {image#2}Step#2: Pick up the knife from the counter, left of the stove.  {image#3}Step#3: Take the knife and turn around, then face the counter on the right. {image#4} Current Step: ",
+                "images_path": [
+                    "76.jpg",
+                    "77.jpg",
+                    "78.jpg",
+                    "79.jpg"
+                ],
+                "combined_1_images": [
+                    "23.jpg"
+                ]
+            },
+            "response": "Place the knife in the plate on the left side of the counter.",
+            "old_sample_id": 17976,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 24,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Cook the apple in the microwave and throw it away.  Step Details: {image#1}Step#1: Turn to the right and head towards the counter. {image#2}Step#2: Pick up the apple. {image#3}Step#3: Turn to the right a bit and face the microwave. {image#4} Current Step: ",
+                "images_path": [
+                    "80.jpg",
+                    "81.jpg",
+                    "82.jpg",
+                    "83.jpg"
+                ],
+                "combined_1_images": [
+                    "24.jpg"
+                ]
+            },
+            "response": "Open the microwave, place the apple in the microwave, close the door, cook the apple, and the take it out and close the door.",
+            "old_sample_id": 18653,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 25,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a warmed apple on the counter.  Step Details: {image#1}Step#1: Go left to stand in front of the sink. {image#2}Step#2: Pick the apple up out of the sink. {image#3}Step#3: Go left and face the counter with the microwave. {image#4} Current Step: ",
+                "images_path": [
+                    "84.jpg",
+                    "85.jpg",
+                    "86.jpg",
+                    "87.jpg"
+                ],
+                "combined_1_images": [
+                    "25.jpg"
+                ]
+            },
+            "response": "Put the apple in the microwave, shut the door, open the door and take the apple out and shut the door.",
+            "old_sample_id": 19735,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 26,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Moving two vases from the fireplace to a side table  Step Details: {image#1}Step#1: Go forward and turn right towards the fireplace {image#2}Step#2: Pick up a vase from the top of the fireplace {image#3}Step#3: Turn around and move in between the couch and end table {image#4}Step#4: Place the vase on the end table to the left of the couch {image#5} Current Step: ",
+                "images_path": [
+                    "88.jpg",
+                    "89.jpg",
+                    "90.jpg",
+                    "91.jpg",
+                    "92.jpg"
+                ],
+                "combined_1_images": [
+                    "26.jpg"
+                ]
+            },
+            "response": "Turn left and go to the fireplace ",
+            "old_sample_id": 19852,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 27,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Heat up a piece of slice tomato.  Step Details: {image#1}Step#1: Turn around and head towards the sink on your right. {image#2}Step#2: Pick up the knife that is in front of the plate. {image#3}Step#3: Turn right and towards the sink on your left. {image#4} Current Step: ",
+                "images_path": [
+                    "93.jpg",
+                    "94.jpg",
+                    "95.jpg",
+                    "96.jpg"
+                ],
+                "combined_1_images": [
+                    "27.jpg"
+                ]
+            },
+            "response": "Slice the tomato in the sink.",
+            "old_sample_id": 20453,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 28,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two key chains from a chair to a coffee table.  Step Details: {image#1}Step#1: Turn right, walk past the coffee table to the green chair with two key chains on it. {image#2}Step#2: Pick up the key chain in the front from the chair. {image#3}Step#3: Turn around and walk to the tissue boxes on the coffee table. {image#4} Current Step: ",
+                "images_path": [
+                    "97.jpg",
+                    "98.jpg",
+                    "99.jpg",
+                    "100.jpg"
+                ],
+                "combined_1_images": [
+                    "28.jpg"
+                ]
+            },
+            "response": "Put the key chain on the coffee table, to the left of the tissue box which is in front of the newspaper.",
+            "old_sample_id": 20668,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 29,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Moving a tomato slice to the trash can  Step Details: {image#1}Step#1: Turn right and face the counter with the toaster on it {image#2}Step#2: Grab the knife off of the counter {image#3}Step#3: Cut the tomato on the counter into slices {image#4}Step#4: Look up at the counter {image#5} Current Step: ",
+                "images_path": [
+                    "101.jpg",
+                    "102.jpg",
+                    "103.jpg",
+                    "104.jpg",
+                    "105.jpg"
+                ],
+                "combined_1_images": [
+                    "29.jpg"
+                ]
+            },
+            "response": "Put the knife on the counter",
+            "old_sample_id": 20858,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 30,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Throw out a clean tomato slice in the garbage.   Step Details: {image#1}Step#1: Turn to your left and go to the counter to the right of the stove.  {image#2} Current Step: ",
+                "images_path": [
+                    "106.jpg",
+                    "107.jpg"
+                ],
+                "combined_1_images": [
+                    "30.jpg"
+                ]
+            },
+            "response": "Pick up the butter knife, close to the edge of the counter, and to the left of the fork, on the counter. ",
+            "old_sample_id": 20885,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 31,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cup with a pencil in it on the dresser.  Step Details: {image#1}Step#1: Go right and stand in front of the night stand to the left of the bed. {image#2}Step#2: Pick the pencil up off of the night stand. {image#3}Step#3: Put the pencil in the cup on the left. {image#4} Current Step: ",
+                "images_path": [
+                    "108.jpg",
+                    "109.jpg",
+                    "110.jpg",
+                    "111.jpg"
+                ],
+                "combined_1_images": [
+                    "31.jpg"
+                ]
+            },
+            "response": "Pick up the black cup with the pencil in it.",
+            "old_sample_id": 21965,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 32,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  turn on a lamp while holding keys  Step Details: {image#1}Step#1: turn right and walk to the TV, then take a right and walk over to the desk to the right of the piano against the wall {image#2} Current Step: ",
+                "images_path": [
+                    "112.jpg",
+                    "113.jpg"
+                ],
+                "combined_1_images": [
+                    "32.jpg"
+                ]
+            },
+            "response": "grab the keys out from the pull out drawers of the desk there",
+            "old_sample_id": 22263,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 33,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place two bowls on a desk.  Step Details: {image#1}Step#1: Turn left and walk to the dresser at the foot at the bed. {image#2}Step#2: Pick up the bowl near the lamp. {image#3}Step#3: Turn around and walk to the side of the desk with the chair. {image#4} Current Step: ",
+                "images_path": [
+                    "114.jpg",
+                    "115.jpg",
+                    "116.jpg",
+                    "117.jpg"
+                ],
+                "combined_1_images": [
+                    "33.jpg"
+                ]
+            },
+            "response": "Put the bowl on the desk to the right of the book.",
+            "old_sample_id": 22591,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 34,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a bowl into a cabinet  Step Details: {image#1}Step#1: Turn left and head to the refrigerator {image#2}Step#2: Open the refrigerator and pick up the brown bowl on the bottom shelf then close the refrigerator {image#3}Step#3: Turn right and cross the room to the microwave {image#4} Current Step: ",
+                "images_path": [
+                    "118.jpg",
+                    "119.jpg",
+                    "120.jpg",
+                    "121.jpg"
+                ],
+                "combined_1_images": [
+                    "34.jpg"
+                ]
+            },
+            "response": "Open the microwave and place the bowl inside the microwave then turn on the microwave",
+            "old_sample_id": 22646,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 35,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Grab the pencil on the coffee table, turn on the floor lamp in the corner  Step Details: {image#1}Step#1: Turn right, walk straight to the furnace, turn left to the coffee table {image#2}Step#2: Grab the pencil on the coffee table {image#3} Current Step: ",
+                "images_path": [
+                    "122.jpg",
+                    "123.jpg",
+                    "124.jpg"
+                ],
+                "combined_1_images": [
+                    "35.jpg"
+                ]
+            },
+            "response": "Turn right, walk around the coffee table, go behind the sofa chair, walk to the corner",
+            "old_sample_id": 23119,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 36,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  TO heat an apple as well as place it on the black table.  Step Details: {image#1}Step#1: Turn left and walk forward to face the counter to the right of the sink. {image#2} Current Step: ",
+                "images_path": [
+                    "125.jpg",
+                    "126.jpg"
+                ],
+                "combined_1_images": [
+                    "36.jpg"
+                ]
+            },
+            "response": "Pick up the apple at the back of the counter.",
+            "old_sample_id": 23520,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 37,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two cushions from the bed to the chair by the window.   Step Details: {image#1}Step#1: Turn around and go to the bed. {image#2} Current Step: ",
+                "images_path": [
+                    "127.jpg",
+                    "128.jpg"
+                ],
+                "combined_1_images": [
+                    "37.jpg"
+                ]
+            },
+            "response": "Pick up a cushion on the bed. ",
+            "old_sample_id": 24673,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 38,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Move the coffee cup from the table to sink.   Step Details: {image#1}Step#1: Turn around and go to the table. {image#2} Current Step: ",
+                "images_path": [
+                    "129.jpg",
+                    "130.jpg"
+                ],
+                "combined_1_images": [
+                    "38.jpg"
+                ]
+            },
+            "response": "Pick up the butter knife on the table. ",
+            "old_sample_id": 25048,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 39,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  drop the plate with a knife in it on the table  Step Details: {image#1}Step#1: move forward to the table {image#2}Step#2: pick up a knife on the table {image#3}Step#3: drop the knife on the plate on the table {image#4} Current Step: ",
+                "images_path": [
+                    "131.jpg",
+                    "132.jpg",
+                    "133.jpg",
+                    "134.jpg"
+                ],
+                "combined_1_images": [
+                    "39.jpg"
+                ]
+            },
+            "response": "pick up the plate from the table",
+            "old_sample_id": 26664,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 40,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two glasses to a kitchen counter  Step Details: {image#1}Step#1: Walk to the refrigerator {image#2}Step#2: Take a glass out of the refrigerator {image#3} Current Step: ",
+                "images_path": [
+                    "135.jpg",
+                    "136.jpg",
+                    "137.jpg"
+                ],
+                "combined_1_images": [
+                    "40.jpg"
+                ]
+            },
+            "response": "Walk to the kitchen counter",
+            "old_sample_id": 26939,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 41,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Move the soap from the back of the toilet to the drawer below the sink.  Step Details: {image#1}Step#1: Turn and walk to the toilet. {image#2}Step#2: Pick up the soap off the back of the toilet.  {image#3} Current Step: ",
+                "images_path": [
+                    "138.jpg",
+                    "139.jpg",
+                    "140.jpg"
+                ],
+                "combined_1_images": [
+                    "41.jpg"
+                ]
+            },
+            "response": "Turn and walk in front of the sink.",
+            "old_sample_id": 27447,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 42,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  The robot's goal is to carry two tissue boxes to the shelving unit across the room.  Step Details: {image#1}Step#1: Turn right.  Move to vanity counter. {image#2}Step#2: Pick up tissue box from the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "141.jpg",
+                    "142.jpg",
+                    "143.jpg"
+                ],
+                "combined_1_images": [
+                    "42.jpg"
+                ]
+            },
+            "response": "Turn around.  Move across to toilet, then turn to the left.  Walk across to the silver shelves.",
+            "old_sample_id": 28238,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 43,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two spray bottles from the toilet to a rack  Step Details: {image#1}Step#1: Go to the toilet {image#2}Step#2: Pick up the spray bottle from the top of the toilet {image#3}Step#3: Go to the rack {image#4} Current Step: ",
+                "images_path": [
+                    "144.jpg",
+                    "145.jpg",
+                    "146.jpg",
+                    "147.jpg"
+                ],
+                "combined_1_images": [
+                    "43.jpg"
+                ]
+            },
+            "response": "Place the spray bottle down on the rack",
+            "old_sample_id": 28893,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 44,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Place two white bottles on top metal shelf  Step Details: {image#1}Step#1: turn right, go to toilet to the right {image#2} Current Step: ",
+                "images_path": [
+                    "148.jpg",
+                    "149.jpg"
+                ],
+                "combined_1_images": [
+                    "44.jpg"
+                ]
+            },
+            "response": "pick up white bottle with orange top from toilet tank",
+            "old_sample_id": 28896,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 45,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a tomato in a pan and cut into slices.  Step Details: {image#1}Step#1: Turn right, walk forward, then hang left and go to the stove. {image#2}Step#2: Pick up the pan that's on the stove. {image#3}Step#3: Turn left, step forward and turn left to face the kitchen counter. {image#4} Current Step: ",
+                "images_path": [
+                    "150.jpg",
+                    "151.jpg",
+                    "152.jpg",
+                    "153.jpg"
+                ],
+                "combined_1_images": [
+                    "45.jpg"
+                ]
+            },
+            "response": "Place the pan on the counter between the fridge and stove.",
+            "old_sample_id": 29289,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 46,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Pick up two sprayers, place in bathroom cabinet.  Step Details: {image#1}Step#1: Step forward, turn right, step forward, then turn left to come to the corner of the vanity. {image#2}Step#2: Pick up the purple sprayer to the right. {image#3}Step#3: Turn left, step forward, turn left, step forward, then turn right and step forward to the bathroom vanity. {image#4}Step#4: Open the bottom right cabinet door, place the sprayer inside, close the door. {image#5} Current Step: ",
+                "images_path": [
+                    "154.jpg",
+                    "155.jpg",
+                    "156.jpg",
+                    "157.jpg",
+                    "158.jpg"
+                ],
+                "combined_1_images": [
+                    "46.jpg"
+                ]
+            },
+            "response": "Turn  around, step forward, then turn left to face the trash can.",
+            "old_sample_id": 29839,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 47,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the cabbage from the fridge going to the trash can  Step Details: {image#1}Step#1: Turn to your left then turn right, walk towards the microwave {image#2} Current Step: ",
+                "images_path": [
+                    "159.jpg",
+                    "160.jpg"
+                ],
+                "combined_1_images": [
+                    "47.jpg"
+                ]
+            },
+            "response": "Pick up the cabbage on the counter beside the microwave",
+            "old_sample_id": 29906,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 48,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a phone on a shelf.  Step Details: {image#1}Step#1: Turn to the right and then right again to face the black desk. {image#2}Step#2: Pick the phone up from the desk. {image#3}Step#3: Turn around and face the small cabinet with discs on it to the left. {image#4} Current Step: ",
+                "images_path": [
+                    "161.jpg",
+                    "162.jpg",
+                    "163.jpg",
+                    "164.jpg"
+                ],
+                "combined_1_images": [
+                    "48.jpg"
+                ]
+            },
+            "response": "Put the phone on the shelf below the disc.",
+            "old_sample_id": 30216,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 49,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a piece of cold apple in a microwave.  Step Details: {image#1}Step#1: Turn around, go forward to the oven, turn left, go to the counter with the toaster and coffee machine. {image#2}Step#2: Take the knife to the right of the coffee machine. {image#3} Current Step: ",
+                "images_path": [
+                    "165.jpg",
+                    "166.jpg",
+                    "167.jpg"
+                ],
+                "combined_1_images": [
+                    "49.jpg"
+                ]
+            },
+            "response": "Turn right to face the oven.",
+            "old_sample_id": 30308,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 50,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Chill a bottle of wine.   Step Details: {image#1}Step#1: Go to the counter to your right. {image#2}Step#2: Pick up the wine bottle next to the toaster. {image#3} Current Step: ",
+                "images_path": [
+                    "168.jpg",
+                    "169.jpg",
+                    "170.jpg"
+                ],
+                "combined_1_images": [
+                    "50.jpg"
+                ]
+            },
+            "response": "Go to the fridge behind you.",
+            "old_sample_id": 30959,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 51,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Chill the frying pan and put it on the table.   Step Details: {image#1}Step#1: Turn right and walk to the counter.  Turn right again so you are facing the toaster. {image#2}Step#2: Pick up the frying pan in front of the toaster. {image#3}Step#3: Turn right and walk to the door.  Turn left and face the refrigerator. {image#4}Step#4: Open the refrigerator door and place the frying pan on the top shelf in the refrigerator and close the refrigerator door again.  Open the refrigerator door and remove the frying pan from the top shelf, then close the refrigerator door. {image#5} Current Step: ",
+                "images_path": [
+                    "171.jpg",
+                    "172.jpg",
+                    "173.jpg",
+                    "174.jpg",
+                    "175.jpg"
+                ],
+                "combined_1_images": [
+                    "51.jpg"
+                ]
+            },
+            "response": "Turn completely around, walk to the wall, turn to the right so you are facing the white table. ",
+            "old_sample_id": 31617,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 52,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Put two candles in the cabinet.   Step Details: {image#1}Step#1: Turn left and go to the front of the toilet in the right corner.  {image#2}Step#2: Pick up the candle on the top of the tank on the left side.  {image#3}Step#3: Turn right and go to the right cabinet below the sink on the left. {image#4} Current Step: ",
+                "images_path": [
+                    "176.jpg",
+                    "177.jpg",
+                    "178.jpg",
+                    "179.jpg"
+                ],
+                "combined_1_images": [
+                    "52.jpg"
+                ]
+            },
+            "response": "Place the candle in the cabinet on the right front side of the soap bottle. ",
+            "old_sample_id": 32505,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 53,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Reading a book by the lamp light  Step Details: {image#1}Step#1: Turn to the table to the left {image#2}Step#2: Pick up the third book from the left {image#3}Step#3: Go around the desk to the side with the vent to the left and looking at the lamp {image#4} Current Step: ",
+                "images_path": [
+                    "180.jpg",
+                    "181.jpg",
+                    "182.jpg",
+                    "183.jpg"
+                ],
+                "combined_1_images": [
+                    "53.jpg"
+                ]
+            },
+            "response": "Turn on the light",
+            "old_sample_id": 32540,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 54,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  To cut a vegetable plus put a slice of it into a pot as well as set the pot on the counter.  Step Details: {image#1}Step#1: Walk around to the opposite end of the kitchen table on the right and face the end. {image#2}Step#2: Pick up the knife of the table. {image#3}Step#3: Turn to the right and walk forward to the table across room and face it. {image#4}Step#4: Cut the green vegetable on the table into slices. {image#5} Current Step: ",
+                "images_path": [
+                    "184.jpg",
+                    "185.jpg",
+                    "186.jpg",
+                    "187.jpg",
+                    "188.jpg"
+                ],
+                "combined_1_images": [
+                    "54.jpg"
+                ]
+            },
+            "response": "Turn to the left and walk forward to face the counter to the right of the sink.",
+            "old_sample_id": 32752,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 55,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  examine the remote under the lamp  Step Details: {image#1}Step#1: go to the tv stand {image#2}Step#2: get the remote from the stand {image#3}Step#3: take the remote to the lamp {image#4} Current Step: ",
+                "images_path": [
+                    "189.jpg",
+                    "190.jpg",
+                    "191.jpg",
+                    "192.jpg"
+                ],
+                "combined_1_images": [
+                    "55.jpg"
+                ]
+            },
+            "response": "turn on the lamp",
+            "old_sample_id": 33293,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 56,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cold champagne  glass on the table.  Step Details: {image#1}Step#1: Walk forward to the counter then turn right and walk to the wall then turn right. {image#2}Step#2: Pick up the champagne glass under the salt near the wall to the left. {image#3}Step#3: Turn right and take two steps then turn left and walk to the fridge. {image#4}Step#4: Chill the champagne glass in the fridge then get it back out and close the door. {image#5} Current Step: ",
+                "images_path": [
+                    "193.jpg",
+                    "194.jpg",
+                    "195.jpg",
+                    "196.jpg",
+                    "197.jpg"
+                ],
+                "combined_1_images": [
+                    "56.jpg"
+                ]
+            },
+            "response": "Turn around and take a step then turn right to face the table.",
+            "old_sample_id": 33415,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 57,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Examine the keys by the light  Step Details: {image#1}Step#1: Turn left walk forward then turn right head to the center table  {image#2} Current Step: ",
+                "images_path": [
+                    "198.jpg",
+                    "199.jpg"
+                ],
+                "combined_1_images": [
+                    "57.jpg"
+                ]
+            },
+            "response": "Pick up the keys on the center table ",
+            "old_sample_id": 33450,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 58,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a lettuce slice on a plate on a black table.  Step Details: {image#1}Step#1: Turn around and face the counter with the lettuce on it. {image#2}Step#2: Take the knife from the counter in front of you. {image#3}Step#3: Slice the lettuce on the counter in front of you. {image#4}Step#4: Turn right then face the square bowl on the counter on your left. {image#5} Current Step: ",
+                "images_path": [
+                    "200.jpg",
+                    "201.jpg",
+                    "202.jpg",
+                    "203.jpg",
+                    "204.jpg"
+                ],
+                "combined_1_images": [
+                    "58.jpg"
+                ]
+            },
+            "response": "Place the knife in the square bowl in front of you.",
+            "old_sample_id": 33769,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 59,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place the two cellphones from the beds on the desk.  Step Details: {image#1}Step#1: Turn right towards the shelves and then turn left towards the middle of the bed to your left. {image#2} Current Step: ",
+                "images_path": [
+                    "205.jpg",
+                    "206.jpg"
+                ],
+                "combined_1_images": [
+                    "59.jpg"
+                ]
+            },
+            "response": "Pick up the cellphone on the bed.",
+            "old_sample_id": 34002,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 60,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Wet a sponge to put in bath tub.  Step Details: {image#1}Step#1: Turn and go to the bathroom counter to the right of the sink. {image#2} Current Step: ",
+                "images_path": [
+                    "207.jpg",
+                    "208.jpg"
+                ],
+                "combined_1_images": [
+                    "60.jpg"
+                ]
+            },
+            "response": "Pick up the sponge that is to the right of the sink.",
+            "old_sample_id": 34318,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 61,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  place both sets of keys inside of the safe  Step Details: {image#1}Step#1: turn around and walk to the other side of the room to face the white shelves on the right side of the room {image#2}Step#2: grab the keys off of the shelf there {image#3}Step#3: turn around and walk over to the safe on the floor of the opposite side of the room {image#4} Current Step: ",
+                "images_path": [
+                    "209.jpg",
+                    "210.jpg",
+                    "211.jpg",
+                    "212.jpg"
+                ],
+                "combined_1_images": [
+                    "61.jpg"
+                ]
+            },
+            "response": "place the keys in the safe there",
+            "old_sample_id": 34405,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 62,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a clean ice cream scoop in the cabinet.  Step Details: {image#1}Step#1: Turn around and walk to the sink then turn right and walk to the counter. {image#2}Step#2: Pick up the ice cream scoop that's in front of you. {image#3}Step#3: Turn left and take a step to your left. {image#4}Step#4: Wash the ice cream scoop in the sink and then pick it back up and shut off the water. {image#5} Current Step: ",
+                "images_path": [
+                    "213.jpg",
+                    "214.jpg",
+                    "215.jpg",
+                    "216.jpg",
+                    "217.jpg"
+                ],
+                "combined_1_images": [
+                    "62.jpg"
+                ]
+            },
+            "response": "Take a step backwards so you can use the cupboard under the sink.",
+            "old_sample_id": 34562,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 63,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Put two spoons beside the microwave  Step Details: {image#1}Step#1: Turn left, go forward, turn right after passing the sink {image#2}Step#2: Pick up the spoon on the counter {image#3}Step#3: Turn right, go forward , turn right and go to the microwave {image#4}Step#4: Put the spoon to the left of the microwave {image#5} Current Step: ",
+                "images_path": [
+                    "218.jpg",
+                    "219.jpg",
+                    "220.jpg",
+                    "221.jpg",
+                    "222.jpg"
+                ],
+                "combined_1_images": [
+                    "63.jpg"
+                ]
+            },
+            "response": "Turn around, go to the counter",
+            "old_sample_id": 34827,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 64,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Throw out the hand towel  Step Details: {image#1}Step#1: turn left and go towards the sink and counter {image#2} Current Step: ",
+                "images_path": [
+                    "223.jpg",
+                    "224.jpg"
+                ],
+                "combined_1_images": [
+                    "64.jpg"
+                ]
+            },
+            "response": "take the hand towel",
+            "old_sample_id": 34946,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 65,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Throwing away a towel  Step Details: {image#1}Step#1: Turn to your left and face the mirrors {image#2} Current Step: ",
+                "images_path": [
+                    "225.jpg",
+                    "226.jpg"
+                ],
+                "combined_1_images": [
+                    "65.jpg"
+                ]
+            },
+            "response": "Grab the towel that is hanging from the wall in front of you",
+            "old_sample_id": 34958,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 66,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Heat up the egg by the sink in the microwave and put it in the green trash can.  Step Details: {image#1}Step#1: Walk forward past the trash, turn to the right and approach the sink. {image#2}Step#2: Grab the egg to the right of the sink. {image#3}Step#3: Turn to the right, walk to the microwave and face it. {image#4}Step#4: Heat up the egg in the microwave and grab it again. {image#5} Current Step: ",
+                "images_path": [
+                    "227.jpg",
+                    "228.jpg",
+                    "229.jpg",
+                    "230.jpg",
+                    "231.jpg"
+                ],
+                "combined_1_images": [
+                    "66.jpg"
+                ]
+            },
+            "response": "Turn left twice and move forward to the trash can.",
+            "old_sample_id": 35350,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 67,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a chilled mug on the wooden shelf.  Step Details: {image#1}Step#1: Move to the counter to the right of the sink {image#2}Step#2: pick up the mug from the counter {image#3} Current Step: ",
+                "images_path": [
+                    "232.jpg",
+                    "233.jpg",
+                    "234.jpg"
+                ],
+                "combined_1_images": [
+                    "67.jpg"
+                ]
+            },
+            "response": "move to the fridge to the right of you",
+            "old_sample_id": 35589,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 68,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a brass candle holder from a coffee table to an end table.  Step Details: {image#1}Step#1: Turn the opposite direction and go to face the left end of the coffee table that is to your right. {image#2}Step#2: Pick up the brass candle holder from the coffee table. {image#3} Current Step: ",
+                "images_path": [
+                    "235.jpg",
+                    "236.jpg",
+                    "237.jpg"
+                ],
+                "combined_1_images": [
+                    "68.jpg"
+                ]
+            },
+            "response": "Turn away from the coffee table and move toward the wall.",
+            "old_sample_id": 36121,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 69,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Place the toilet paper rolls in the drawer below the sink.  Step Details: {image#1}Step#1: Turn right and walk towards the toilet. {image#2}Step#2: Pick up the toilet paper on the toilet. {image#3} Current Step: ",
+                "images_path": [
+                    "238.jpg",
+                    "239.jpg",
+                    "240.jpg"
+                ],
+                "combined_1_images": [
+                    "69.jpg"
+                ]
+            },
+            "response": "Turn around and walk towards the vanity.",
+            "old_sample_id": 36261,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 70,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Pick up the box and turn on the light.  Step Details: {image#1}Step#1: Turn left and go forward to the box. {image#2} Current Step: ",
+                "images_path": [
+                    "241.jpg",
+                    "242.jpg"
+                ],
+                "combined_1_images": [
+                    "70.jpg"
+                ]
+            },
+            "response": "Pick up the box from the floor. ",
+            "old_sample_id": 36356,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 71,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the plate with the sponge into the cabinet..   Step Details: {image#1}Step#1: Turn right and go to the wooden shelves in front.  {image#2}Step#2: Pick up the green sponge on the second shelf from the bottom.  {image#3}Step#3: Turn around and go to the middle of the kitchen island on the left. {image#4}Step#4: Place the green sponge on the white plate on the table near the edge. {image#5} Current Step: ",
+                "images_path": [
+                    "243.jpg",
+                    "244.jpg",
+                    "245.jpg",
+                    "246.jpg",
+                    "247.jpg"
+                ],
+                "combined_1_images": [
+                    "71.jpg"
+                ]
+            },
+            "response": "Pick up the white plate with the green sponge on it.",
+            "old_sample_id": 37110,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 72,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Wash a knife and plate and put them away.   Step Details: {image#1}Step#1: Turn right and walk forward then right again to face the counter. {image#2} Current Step: ",
+                "images_path": [
+                    "248.jpg",
+                    "249.jpg"
+                ],
+                "combined_1_images": [
+                    "72.jpg"
+                ]
+            },
+            "response": "Pick up a dirty bowl with a knife in it from the counter top. ",
+            "old_sample_id": 37439,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 73,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Grab the bowl from the dresser, turn on the lamp  Step Details: {image#1}Step#1: Walk straight to the table, turn right and walk to the dresser {image#2} Current Step: ",
+                "images_path": [
+                    "250.jpg",
+                    "251.jpg"
+                ],
+                "combined_1_images": [
+                    "73.jpg"
+                ]
+            },
+            "response": "Grab the bowl in the back",
+            "old_sample_id": 37994,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 74,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Put two loaves of bread in the fridge.  Step Details: {image#1}Step#1: Turn left, move past the counter on the left, turn right, move to the table {image#2}Step#2: Pick up the nearest loaf of bread on the table {image#3}Step#3: Turn around, move one floor tile, turn left, move to the fridge, turn left {image#4} Current Step: ",
+                "images_path": [
+                    "252.jpg",
+                    "253.jpg",
+                    "254.jpg",
+                    "255.jpg"
+                ],
+                "combined_1_images": [
+                    "74.jpg"
+                ]
+            },
+            "response": "Open the fridge, put the loaf on the center shelf, close the doors",
+            "old_sample_id": 38086,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 75,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put two boxes of tissues on the table.  Step Details: {image#1}Step#1: Turn left and take a step then turn left and walk to the table. {image#2}Step#2: Pick up the box of tissues that are in front of you on the table. {image#3}Step#3: Turn left and walk all the way to the coffee table beyond the chair then turn right to face the middle of it. {image#4} Current Step: ",
+                "images_path": [
+                    "256.jpg",
+                    "257.jpg",
+                    "258.jpg",
+                    "259.jpg"
+                ],
+                "combined_1_images": [
+                    "75.jpg"
+                ]
+            },
+            "response": "Put the tissues on the coffee table close to the laptop to it's left.",
+            "old_sample_id": 38162,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 76,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Place cold lettuce in the sink.  Step Details: {image#1}Step#1: Turn right and when you get to the end of the counter on your left, turn right again until you're in front of the square white table. {image#2} Current Step: ",
+                "images_path": [
+                    "260.jpg",
+                    "261.jpg"
+                ],
+                "combined_1_images": [
+                    "76.jpg"
+                ]
+            },
+            "response": "Pick up the head of lettuce from the table.",
+            "old_sample_id": 38335,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 77,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Cook an egg in the microwave, put the egg on the table.  Step Details: {image#1}Step#1: Turn around and walk to the white table on your left. {image#2} Current Step: ",
+                "images_path": [
+                    "262.jpg",
+                    "263.jpg"
+                ],
+                "combined_1_images": [
+                    "77.jpg"
+                ]
+            },
+            "response": "Pick up the egg from the table.",
+            "old_sample_id": 39187,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 78,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  put the fork from the sink to the cup in the refrigerator, move the cup to the table by it  Step Details: {image#1}Step#1: walk straight, to the sink on the right {image#2} Current Step: ",
+                "images_path": [
+                    "264.jpg",
+                    "265.jpg"
+                ],
+                "combined_1_images": [
+                    "78.jpg"
+                ]
+            },
+            "response": "grab the fork from the sink",
+            "old_sample_id": 39252,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 79,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a fork in a cup and take them to the counter.  Step Details: {image#1}Step#1: Go forward and then right to face the sink. {image#2}Step#2: Pick up the fork from inside the sink. {image#3}Step#3: Carry the fork and turn to the right and the right again to find the fridge. {image#4}Step#4: Open the fridge and place the fork in a cup. {image#5} Current Step: ",
+                "images_path": [
+                    "266.jpg",
+                    "267.jpg",
+                    "268.jpg",
+                    "269.jpg",
+                    "270.jpg"
+                ],
+                "combined_1_images": [
+                    "79.jpg"
+                ]
+            },
+            "response": "Take the cup and fork out of the fridge and shut the door.",
+            "old_sample_id": 39280,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 80,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Place the plate along with the knife and scoop in the right sink.  Step Details: {image#1}Step#1: Turn left and head towards the sink. {image#2}Step#2: Pick up the knife to the left of the sink. {image#3}Step#3: Take a step to the right from where you are at. {image#4}Step#4: Place the knife on the gold plate with the gold scoop. {image#5} Current Step: ",
+                "images_path": [
+                    "271.jpg",
+                    "272.jpg",
+                    "273.jpg",
+                    "274.jpg",
+                    "275.jpg"
+                ],
+                "combined_1_images": [
+                    "80.jpg"
+                ]
+            },
+            "response": "Pick up the plate along with the knife and scoop.",
+            "old_sample_id": 39789,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 81,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Pick up a credit card to look at under a tall lamp.  Step Details: {image#1}Step#1: Turn around, making your way across the room to the black couch. {image#2}Step#2: Pick up the credit card from the couch. {image#3} Current Step: ",
+                "images_path": [
+                    "276.jpg",
+                    "277.jpg",
+                    "278.jpg"
+                ],
+                "combined_1_images": [
+                    "81.jpg"
+                ]
+            },
+            "response": "Turn around, walk all the way across the room to the farthest wall to the tall lamp in the corner.",
+            "old_sample_id": 40771,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 82,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two yellow spray bottles into a small bin.  Step Details: {image#1}Step#1: Walk towards the door, then turn right and walk up to the box. {image#2} Current Step: ",
+                "images_path": [
+                    "279.jpg",
+                    "280.jpg"
+                ],
+                "combined_1_images": [
+                    "82.jpg"
+                ]
+            },
+            "response": "Pick up the closest yellow spray bottle off of the box.",
+            "old_sample_id": 41580,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 83,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put clean soap on the back of the toilet.  Step Details: {image#1}Step#1: Move to the left side of the toilet. {image#2}Step#2: Pick the soap up from the back of the toilet. {image#3}Step#3: Turn around and approach the sink? {image#4}Step#4: Put the soap in the sink, turn on the water, turn off the water and take the soap out of the sink. {image#5} Current Step: ",
+                "images_path": [
+                    "281.jpg",
+                    "282.jpg",
+                    "283.jpg",
+                    "284.jpg",
+                    "285.jpg"
+                ],
+                "combined_1_images": [
+                    "83.jpg"
+                ]
+            },
+            "response": "Move to the left and stand facing the right side of the toilet.",
+            "old_sample_id": 43049,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 84,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Heat a loaf of bread, put it on the counter.   Step Details: {image#1}Step#1: Move to the white table.  {image#2}Step#2: Pick up the bread in front of the tomato.  {image#3}Step#3: Bring the bread to the microwave.  {image#4} Current Step: ",
+                "images_path": [
+                    "286.jpg",
+                    "287.jpg",
+                    "288.jpg",
+                    "289.jpg"
+                ],
+                "combined_1_images": [
+                    "84.jpg"
+                ]
+            },
+            "response": "Heat the bread in the microwave. ",
+            "old_sample_id": 43552,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 85,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a chilled loaf of bread on the table.  Step Details: {image#1}Step#1: Turn around and face the center of the table to the right of the silver range. {image#2}Step#2: Pick up the loaf of bread to the right of the microwave on the table. {image#3}Step#3: Turn to the left, move past the range, then turn to left and then move and face the refrigerator. {image#4}Step#4: Open the refrigerator door, place the loaf of bread on the top shelf above the blue plate, let it cool in the refrigerator, then open the refrigerator door, pick up the loaf of bread, and then close the refrigerator door. {image#5} Current Step: ",
+                "images_path": [
+                    "290.jpg",
+                    "291.jpg",
+                    "292.jpg",
+                    "293.jpg",
+                    "294.jpg"
+                ],
+                "combined_1_images": [
+                    "85.jpg"
+                ]
+            },
+            "response": "Turn to the left, move past the blue coffee maker, then turn right and face the table to the left of the dishwasher.",
+            "old_sample_id": 43828,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 86,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two spray bottles on top of the toilet.  Step Details: {image#1}Step#1: Turn right and face the red trash can in front of you. {image#2}Step#2: Take out the spray bottle in the red trash can in front of you. {image#3}Step#3: Turn around and face the toilet in front of you. {image#4} Current Step: ",
+                "images_path": [
+                    "295.jpg",
+                    "296.jpg",
+                    "297.jpg",
+                    "298.jpg"
+                ],
+                "combined_1_images": [
+                    "86.jpg"
+                ]
+            },
+            "response": "Place the spray bottle on the toilet in front of you.",
+            "old_sample_id": 44096,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 87,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a warm cup in the cupboard.  Step Details: {image#1}Step#1: Turn right and walk almost to the wall in front of you but stop short at the coffee maker and turn right and walk to it. {image#2}Step#2: Get the glass from the cupboard all the way to the left above the coffee maker. {image#3}Step#3: Move a couple steps to your right so you are standing looking at the middle of the sink. {image#4} Current Step: ",
+                "images_path": [
+                    "299.jpg",
+                    "300.jpg",
+                    "301.jpg",
+                    "302.jpg"
+                ],
+                "combined_1_images": [
+                    "87.jpg"
+                ]
+            },
+            "response": "Warm the cup in the microwave then get it back out and close the door.",
+            "old_sample_id": 45341,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 88,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  pick up the two sauce pans off the stove to put them on the counter to the left  Step Details: {image#1}Step#1: walk over to the kitchen stove {image#2}Step#2: grab a sauce pan off of the stove {image#3} Current Step: ",
+                "images_path": [
+                    "303.jpg",
+                    "304.jpg",
+                    "305.jpg"
+                ],
+                "combined_1_images": [
+                    "88.jpg"
+                ]
+            },
+            "response": "turn left to face the kitchen counter",
+            "old_sample_id": 46287,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 89,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cold lettuce head on a counter.  Step Details: {image#1}Step#1: Go forward, turn right, go forward to the lettuce to the left of the microwave. {image#2}Step#2: Take the lettuce from the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "306.jpg",
+                    "307.jpg",
+                    "308.jpg"
+                ],
+                "combined_1_images": [
+                    "89.jpg"
+                ]
+            },
+            "response": "Turn right, go forward to the wall, turn left to the fridge.",
+            "old_sample_id": 46708,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 90,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  cut a slice of bread to put in the microwave  Step Details: {image#1}Step#1: go to the sink {image#2} Current Step: ",
+                "images_path": [
+                    "309.jpg",
+                    "310.jpg"
+                ],
+                "combined_1_images": [
+                    "90.jpg"
+                ]
+            },
+            "response": "pick up the knife from the sink",
+            "old_sample_id": 47252,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 91,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Look at a laptop under the light of a lamp.  Step Details: {image#1}Step#1: Turn around and look down at the table. {image#2}Step#2: Close the laptop and pick it up from the table. {image#3}Step#3: Turn right and walk to the wall then turn right and look up at the lamp. {image#4} Current Step: ",
+                "images_path": [
+                    "311.jpg",
+                    "312.jpg",
+                    "313.jpg",
+                    "314.jpg"
+                ],
+                "combined_1_images": [
+                    "91.jpg"
+                ]
+            },
+            "response": "Turn on the lamp.",
+            "old_sample_id": 50108,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 92,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a warm mug in the cupboard.  Step Details: {image#1}Step#1: Walk forward to the counter then turn right and walk to the counter then step to your left and walk one step forward then turn right. {image#2}Step#2: Pick up the mug that's in front of you. {image#3}Step#3: Turn right and walk to the counter in front of you then turn right. {image#4} Current Step: ",
+                "images_path": [
+                    "315.jpg",
+                    "316.jpg",
+                    "317.jpg",
+                    "318.jpg"
+                ],
+                "combined_1_images": [
+                    "92.jpg"
+                ]
+            },
+            "response": "Warm the mug in the microwave then take it back out and close the door.",
+            "old_sample_id": 50294,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 93,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the cds that are scattered across the room away in the desk.   Step Details: {image#1}Step#1: Turn around. Move to the small black dresser in front of the mirror.  {image#2}Step#2: Pick up the CD on top of the dresser.  {image#3} Current Step: ",
+                "images_path": [
+                    "319.jpg",
+                    "320.jpg",
+                    "321.jpg"
+                ],
+                "combined_1_images": [
+                    "93.jpg"
+                ]
+            },
+            "response": "Move across the room to the brown desk. Open the top right drawer.",
+            "old_sample_id": 50506,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 94,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a clean slice of potato on the table.  Step Details: {image#1}Step#1: Turn around, go across the room, turn right to go around the counter and turn left towards the table. {image#2}Step#2: Pick up the knife behind the sponge on the table. {image#3}Step#3: Look down at the potato on the table. {image#4} Current Step: ",
+                "images_path": [
+                    "322.jpg",
+                    "323.jpg",
+                    "324.jpg",
+                    "325.jpg"
+                ],
+                "combined_1_images": [
+                    "94.jpg"
+                ]
+            },
+            "response": "Cut the potato on the table.",
+            "old_sample_id": 51458,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 95,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Move wine glass on counter to the microwave. Move the wine glass from microwave to refrigerator.  Step Details: {image#1}Step#1: Turn to the left and go forward to the counter. Turn to the left. {image#2} Current Step: ",
+                "images_path": [
+                    "326.jpg",
+                    "327.jpg"
+                ],
+                "combined_1_images": [
+                    "95.jpg"
+                ]
+            },
+            "response": "Go forward to the counter and pick up the wine glass.",
+            "old_sample_id": 51818,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 96,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Read a book using the light of a lamp.  Step Details: {image#1}Step#1: Turn to your right and walk to the desk. {image#2}Step#2: Pick up the book from the desk. {image#3}Step#3: Approach the lamp on the far right of the desk. {image#4} Current Step: ",
+                "images_path": [
+                    "328.jpg",
+                    "329.jpg",
+                    "330.jpg",
+                    "331.jpg"
+                ],
+                "combined_1_images": [
+                    "96.jpg"
+                ]
+            },
+            "response": "Turn on the lamp.",
+            "old_sample_id": 52153,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 97,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a metal pan with a large metal knife in it onto the kitchen counter.  Step Details: {image#1}Step#1: Take a step ahead towards the kitchen counter with the microwave on it. {image#2}Step#2: Pick up the large metal knife with a golden handle. {image#3} Current Step: ",
+                "images_path": [
+                    "332.jpg",
+                    "333.jpg",
+                    "334.jpg"
+                ],
+                "combined_1_images": [
+                    "97.jpg"
+                ]
+            },
+            "response": "Turn right and walk over to the fridge.",
+            "old_sample_id": 52330,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 98,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a washed spoon in a drawer.  Step Details: {image#1}Step#1: turn to the right twice and go to the counter top and turn to the left and go to the counter top {image#2}Step#2: pick up the spoon from the counter top  {image#3}Step#3: turn to the left twice take a few steps and turn to the right and go to the front of the sink {image#4}Step#4: put the spoon in the sink and turn on the water to fill it up and turn off and drain the water and pick up the spoon up from the sink  {image#5} Current Step: ",
+                "images_path": [
+                    "335.jpg",
+                    "336.jpg",
+                    "337.jpg",
+                    "338.jpg",
+                    "339.jpg"
+                ],
+                "combined_1_images": [
+                    "98.jpg"
+                ]
+            },
+            "response": "turn to the right",
+            "old_sample_id": 52621,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 99,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a basketball to the bed.  Step Details: {image#1}Step#1: Walk over to the right side of the wooden desk. {image#2} Current Step: ",
+                "images_path": [
+                    "340.jpg",
+                    "341.jpg"
+                ],
+                "combined_1_images": [
+                    "99.jpg"
+                ]
+            },
+            "response": "Pick up the basketball that is on the ground to the right of the wooden desk.",
+            "old_sample_id": 53080,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 100,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two discs to a small black table.  Step Details: {image#1}Step#1: Turn right and walk over to the chair. {image#2}Step#2: Pick up the disc off of the seat of the chair. {image#3}Step#3: Turn right and walk over to the bed, then turn left and walk up to the small black table. {image#4} Current Step: ",
+                "images_path": [
+                    "342.jpg",
+                    "343.jpg",
+                    "344.jpg",
+                    "345.jpg"
+                ],
+                "combined_1_images": [
+                    "100.jpg"
+                ]
+            },
+            "response": "Put the disc on the small black table to the left of the lamp.",
+            "old_sample_id": 53199,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 101,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Put two credit cards on a table.  Step Details: {image#1}Step#1: Turn right, go forward to the wall, turn left, go forward to the night stand. {image#2}Step#2: Take the credit card from the night stand. {image#3} Current Step: ",
+                "images_path": [
+                    "346.jpg",
+                    "347.jpg",
+                    "348.jpg"
+                ],
+                "combined_1_images": [
+                    "101.jpg"
+                ]
+            },
+            "response": "Turn around, go forward and right to the gray and white table. ",
+            "old_sample_id": 54119,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 102,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Chill a bowl in the fridge.  Step Details: {image#1}Step#1: Turn around and go to the shelf behind you. {image#2} Current Step: ",
+                "images_path": [
+                    "349.jpg",
+                    "350.jpg"
+                ],
+                "combined_1_images": [
+                    "102.jpg"
+                ]
+            },
+            "response": "Take the bowl from the middle shelf, behind the salt.",
+            "old_sample_id": 54389,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 103,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  get the dirty plate from the wooden shelves, wash it in the sink, put the clean plate in the microwave  Step Details: {image#1}Step#1: turn left until the fridge is on the left side, walk straight and stop in front of the wooden shelves {image#2}Step#2: pick up the black and white swirled plate {image#3}Step#3: turn right and walk straight, turn left at the fridge, walk straight and stop at the sink {image#4} Current Step: ",
+                "images_path": [
+                    "351.jpg",
+                    "352.jpg",
+                    "353.jpg",
+                    "354.jpg"
+                ],
+                "combined_1_images": [
+                    "103.jpg"
+                ]
+            },
+            "response": "put the plate in the sink basin, wash it with water, take out the now clean grey plate",
+            "old_sample_id": 54907,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 104,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two newspapers to the coffee table.  Step Details: {image#1}Step#1: Turn and go to the table by the television {image#2} Current Step: ",
+                "images_path": [
+                    "355.jpg",
+                    "356.jpg"
+                ],
+                "combined_1_images": [
+                    "104.jpg"
+                ]
+            },
+            "response": "Pick up a newspaper on the table.",
+            "old_sample_id": 55006,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 105,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a washed apple on the white table.  Step Details: {image#1}Step#1: Turn left and go to the small black table. {image#2}Step#2: Pick up the apple from the table. {image#3}Step#3: Go to the sink on your right. {image#4}Step#4: Wash the apple. {image#5} Current Step: ",
+                "images_path": [
+                    "357.jpg",
+                    "358.jpg",
+                    "359.jpg",
+                    "360.jpg",
+                    "361.jpg"
+                ],
+                "combined_1_images": [
+                    "105.jpg"
+                ]
+            },
+            "response": "Go to the white table on your left.",
+            "old_sample_id": 55054,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 106,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a credit card in front of the television.   Step Details: {image#1}Step#1: Walk to the right side of the table that's in front of you that has a lap top on it.  {image#2}Step#2: Pick up the credit card that's next to the lap top.  {image#3} Current Step: ",
+                "images_path": [
+                    "362.jpg",
+                    "363.jpg",
+                    "364.jpg"
+                ],
+                "combined_1_images": [
+                    "106.jpg"
+                ]
+            },
+            "response": "Turn around and face the white table with the plate on it. ",
+            "old_sample_id": 55167,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 107,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a clean pan on the stove  Step Details: {image#1}Step#1: Walk forward and turn left towards the stove. {image#2} Current Step: ",
+                "images_path": [
+                    "365.jpg",
+                    "366.jpg"
+                ],
+                "combined_1_images": [
+                    "107.jpg"
+                ]
+            },
+            "response": "Grab the pan on the stove.",
+            "old_sample_id": 55753,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 108,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Look at a red credit card under a lit tall lamp.  Step Details: {image#1}Step#1: Turn to make a left and then another left to reach the table. {image#2}Step#2: Pick up the red credit card on the table. {image#3} Current Step: ",
+                "images_path": [
+                    "367.jpg",
+                    "368.jpg",
+                    "369.jpg"
+                ],
+                "combined_1_images": [
+                    "108.jpg"
+                ]
+            },
+            "response": "Turn to make a right towards the tall lamp next to the couch.",
+            "old_sample_id": 55779,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 109,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the chilled cabbage in the sink  Step Details: {image#1}Step#1: Turn to your right, take two steps, and turn left to face the counter to right of the stove {image#2} Current Step: ",
+                "images_path": [
+                    "370.jpg",
+                    "371.jpg"
+                ],
+                "combined_1_images": [
+                    "109.jpg"
+                ]
+            },
+            "response": "Pick up the cabbage from the counter",
+            "old_sample_id": 56069,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 110,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  place a clean tomato slice down on the table in between two full tomatoes  Step Details: {image#1}Step#1: walk over to the kitchen sink on the left side of the room {image#2}Step#2: grab the butter knife off of the back side of the left side kitchen sink {image#3}Step#3: turn right and walk over to the kitchen table in the corner of the room on the way right {image#4} Current Step: ",
+                "images_path": [
+                    "372.jpg",
+                    "373.jpg",
+                    "374.jpg",
+                    "375.jpg"
+                ],
+                "combined_1_images": [
+                    "110.jpg"
+                ]
+            },
+            "response": "slice up the tomato there on the table into slices",
+            "old_sample_id": 57402,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 111,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a heated tomato in the fridge  Step Details: {image#1}Step#1: Turn left, move to the sink, turn right {image#2} Current Step: ",
+                "images_path": [
+                    "376.jpg",
+                    "377.jpg"
+                ],
+                "combined_1_images": [
+                    "111.jpg"
+                ]
+            },
+            "response": "Pick up the tomato in the left sink",
+            "old_sample_id": 58099,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 112,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  pick up remote and place it on the table   Step Details: {image#1}Step#1: go left towards the door then walk left to chair face left at the chair  {image#2}Step#2: grab the remote off of the chair  {image#3}Step#3: turn right walk forward to the wall then turn left  stop in the middle of the table  {image#4} Current Step: ",
+                "images_path": [
+                    "378.jpg",
+                    "379.jpg",
+                    "380.jpg",
+                    "381.jpg"
+                ],
+                "combined_1_images": [
+                    "112.jpg"
+                ]
+            },
+            "response": "place remote on the table",
+            "old_sample_id": 58239,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 113,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Pick up two cooking instruments and place them on a kitchen table  Step Details: {image#1}Step#1: Walk to your right, then face right towards the kitchen cabinet {image#2} Current Step: ",
+                "images_path": [
+                    "382.jpg",
+                    "383.jpg"
+                ],
+                "combined_1_images": [
+                    "113.jpg"
+                ]
+            },
+            "response": "Open the rightmost kitchen cabinet then pick up a measuring cup from in the cabinet",
+            "old_sample_id": 58883,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 114,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a cold slice of bread in the microwave.  Step Details: {image#1}Step#1: Turn left and face the counter next to the sink to your right. {image#2}Step#2: Take the knife off of the counter in front of you. {image#3} Current Step: ",
+                "images_path": [
+                    "384.jpg",
+                    "385.jpg",
+                    "386.jpg"
+                ],
+                "combined_1_images": [
+                    "114.jpg"
+                ]
+            },
+            "response": "Turn right and head towards the counter by the trash can.",
+            "old_sample_id": 58957,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 115,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a pen to a bowl in a cabinet.  Step Details: {image#1}Step#1: Turn around and face the long dresser on the short side.  {image#2}Step#2: Pick up the pen from the dresser, closer to the front. {image#3}Step#3: Carry the pen and turn around to face a cabinet on the right. {image#4} Current Step: ",
+                "images_path": [
+                    "387.jpg",
+                    "388.jpg",
+                    "389.jpg",
+                    "390.jpg"
+                ],
+                "combined_1_images": [
+                    "115.jpg"
+                ]
+            },
+            "response": "Place the pen in a clear bowl in the cabinet.",
+            "old_sample_id": 59297,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 116,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place two remotes on an ottoman.  Step Details: {image#1}Step#1: Walk ahead to the TV stand. {image#2} Current Step: ",
+                "images_path": [
+                    "391.jpg",
+                    "392.jpg"
+                ],
+                "combined_1_images": [
+                    "116.jpg"
+                ]
+            },
+            "response": "Pick up the remote on the left of the other remote.",
+            "old_sample_id": 60800,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 117,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a microwaved piece of apple by the toaster.  Step Details: {image#1}Step#1: Turn left to go to the counter on the left of the stove. {image#2}Step#2: Pick up the gray knife on the counter. {image#3}Step#3: Turn around and go to the blue trash can on the left of the refrigerator. {image#4} Current Step: ",
+                "images_path": [
+                    "393.jpg",
+                    "394.jpg",
+                    "395.jpg",
+                    "396.jpg"
+                ],
+                "combined_1_images": [
+                    "117.jpg"
+                ]
+            },
+            "response": "Cut the apple inside the trashcan",
+            "old_sample_id": 61302,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 118,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  get knife and cut the tomato, cook the tomato in the microwave, place it on the counter  Step Details: {image#1}Step#1: turn right, then straight to counter  {image#2}Step#2: pick up knife off of counter  {image#3} Current Step: ",
+                "images_path": [
+                    "397.jpg",
+                    "398.jpg",
+                    "399.jpg"
+                ],
+                "combined_1_images": [
+                    "118.jpg"
+                ]
+            },
+            "response": "turn around to other counter",
+            "old_sample_id": 62660,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 119,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put cooked tomato in the fridge.  Step Details: {image#1}Step#1: Turn around, go forward to the counter on the right where the toaster is.  {image#2}Step#2: Pick up the butter knife that is on the counter.  {image#3}Step#3: Go to the left to the microwave, then hang a left and go forward to the counter with the tomato on it. {image#4}Step#4: Use the knife to cut the tomato into slices.  {image#5} Current Step: ",
+                "images_path": [
+                    "400.jpg",
+                    "401.jpg",
+                    "402.jpg",
+                    "403.jpg",
+                    "404.jpg"
+                ],
+                "combined_1_images": [
+                    "119.jpg"
+                ]
+            },
+            "response": "Raise the knife up higher in the air. ",
+            "old_sample_id": 64381,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 120,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  place a cold tomato in the microwave oven  Step Details: {image#1}Step#1: move around to the table {image#2}Step#2: pick up the tomato from the table {image#3}Step#3: turn around to the fridge {image#4} Current Step: ",
+                "images_path": [
+                    "405.jpg",
+                    "406.jpg",
+                    "407.jpg",
+                    "408.jpg"
+                ],
+                "combined_1_images": [
+                    "120.jpg"
+                ]
+            },
+            "response": "place the tomato to cool and take it out",
+            "old_sample_id": 64601,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 121,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a statue on a end table  Step Details: {image#1}Step#1: turn to the right twice and go to the chair and turn to the left and go to the end of the table and turn to the left facing the table {image#2} Current Step: ",
+                "images_path": [
+                    "409.jpg",
+                    "410.jpg"
+                ],
+                "combined_1_images": [
+                    "121.jpg"
+                ]
+            },
+            "response": "pick up the dark statue of the person from the table",
+            "old_sample_id": 64885,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 122,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the chilled tomato in the microwave.   Step Details: {image#1}Step#1: Move to the trash can on the left of the yellow chair. {image#2}Step#2: Pick up the tomato from the trash can.  {image#3}Step#3: Bring the tomato to the fridge.  {image#4} Current Step: ",
+                "images_path": [
+                    "411.jpg",
+                    "412.jpg",
+                    "413.jpg",
+                    "414.jpg"
+                ],
+                "combined_1_images": [
+                    "122.jpg"
+                ]
+            },
+            "response": "Chill the tomato in the fridge for 7 seconds. ",
+            "old_sample_id": 66142,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 123,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Slice a potato, clean it, and put in microwave to heat up.  Step Details: {image#1}Step#1: Take a step left toward the sink and back to the microwave. {image#2}Step#2: Pick up the knife next to the microwave on the counter. {image#3}Step#3: Turn right and walk to the other side of the refrigerator. {image#4} Current Step: ",
+                "images_path": [
+                    "415.jpg",
+                    "416.jpg",
+                    "417.jpg",
+                    "418.jpg"
+                ],
+                "combined_1_images": [
+                    "123.jpg"
+                ]
+            },
+            "response": "Cut up the potato on the table.",
+            "old_sample_id": 66527,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 124,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Place two pieces of soap on the back end of the toilet.   Step Details: {image#1}Step#1: Turn to the left and walk forward then turn right to face the sink.  {image#2} Current Step: ",
+                "images_path": [
+                    "419.jpg",
+                    "420.jpg"
+                ],
+                "combined_1_images": [
+                    "124.jpg"
+                ]
+            },
+            "response": "Pick up the soap from the sink counter. ",
+            "old_sample_id": 67648,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 125,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a washed bar of soap on a shelf.  Step Details: {image#1}Step#1: Turn to your right, walk, and then turn left to reach the metal shelf. {image#2}Step#2: Pick up a bar of soap from the top shelf. {image#3} Current Step: ",
+                "images_path": [
+                    "421.jpg",
+                    "422.jpg",
+                    "423.jpg"
+                ],
+                "combined_1_images": [
+                    "125.jpg"
+                ]
+            },
+            "response": "Walk over to the sink.",
+            "old_sample_id": 68160,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 126,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the clean potato in the microwave  Step Details: {image#1}Step#1: Turn right walk forward then turn left and face the table on your left {image#2}Step#2: Pick up the potato on the table {image#3}Step#3: Turn left then head to the sink {image#4} Current Step: ",
+                "images_path": [
+                    "424.jpg",
+                    "425.jpg",
+                    "426.jpg",
+                    "427.jpg"
+                ],
+                "combined_1_images": [
+                    "126.jpg"
+                ]
+            },
+            "response": "Put the potato in the sink and rinse it ",
+            "old_sample_id": 68464,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 127,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place skillet in a freezer  Step Details: {image#1}Step#1: Turn left and walk to the counter to the left of the stove that is to your left {image#2}Step#2: Pick up the knife to the left of the stove {image#3}Step#3: Turn to your left and cross the room, then turn to your left and walk to the microwave in front of you {image#4}Step#4: Open the microwave and cut the potato inside {image#5} Current Step: ",
+                "images_path": [
+                    "428.jpg",
+                    "429.jpg",
+                    "430.jpg",
+                    "431.jpg",
+                    "432.jpg"
+                ],
+                "combined_1_images": [
+                    "127.jpg"
+                ]
+            },
+            "response": "Turn to your left, then walk to the counter to your left",
+            "old_sample_id": 68876,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 128,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  trash  a wet soap in the bin  Step Details: {image#1}Step#1: turn right and head to the tub {image#2}Step#2: pick up a bar soap from the tub {image#3} Current Step: ",
+                "images_path": [
+                    "433.jpg",
+                    "434.jpg",
+                    "435.jpg"
+                ],
+                "combined_1_images": [
+                    "128.jpg"
+                ]
+            },
+            "response": "turn around and head to the sink",
+            "old_sample_id": 68963,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 129,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Bring toilet paper to counter.   Step Details: {image#1}Step#1: Move over to the toilet. {image#2} Current Step: ",
+                "images_path": [
+                    "436.jpg",
+                    "437.jpg"
+                ],
+                "combined_1_images": [
+                    "129.jpg"
+                ]
+            },
+            "response": "Pick up empty toilet paper roll on the floor. ",
+            "old_sample_id": 69122,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 130,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Put cooked potato inside the fridge.  Step Details: {image#1}Step#1: Go across the room  to the coffee maker, turn to the right. {image#2}Step#2: Pick up the butter knife that is on the counter to the left of the gray plate.  {image#3}Step#3: Turn to the right, go across the room to the fridge that is on the left.  {image#4}Step#4: Cut the potato that is inside the fridge into slices and close the door. {image#5} Current Step: ",
+                "images_path": [
+                    "438.jpg",
+                    "439.jpg",
+                    "440.jpg",
+                    "441.jpg",
+                    "442.jpg"
+                ],
+                "combined_1_images": [
+                    "130.jpg"
+                ]
+            },
+            "response": "Back up from the fridge.",
+            "old_sample_id": 69235,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 131,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Chill the potato and put it in the trash  Step Details: {image#1}Step#1: Walk over to the sink {image#2}Step#2: Grab the potato out of the sink {image#3}Step#3: Head over to the fridge {image#4}Step#4: Chill the potato in the fridge {image#5} Current Step: ",
+                "images_path": [
+                    "443.jpg",
+                    "444.jpg",
+                    "445.jpg",
+                    "446.jpg",
+                    "447.jpg"
+                ],
+                "combined_1_images": [
+                    "131.jpg"
+                ]
+            },
+            "response": "Grab the potato and head to the trash can",
+            "old_sample_id": 69541,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 132,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:   put the piece of lettuce in between the bottle and the potatoes that are on the table  Step Details: {image#1}Step#1:  turn and walk to the table {image#2}Step#2: pick up the knife that is on the table {image#3} Current Step: ",
+                "images_path": [
+                    "448.jpg",
+                    "449.jpg",
+                    "450.jpg"
+                ],
+                "combined_1_images": [
+                    "132.jpg"
+                ]
+            },
+            "response": " turn to the table ",
+            "old_sample_id": 69979,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 133,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Turn on the desk lamp.   Step Details: {image#1}Step#1: Turn to your right, and go to the cardboard box, on the floor, to the left of the dresser across from you.  {image#2} Current Step: ",
+                "images_path": [
+                    "451.jpg",
+                    "452.jpg"
+                ],
+                "combined_1_images": [
+                    "133.jpg"
+                ]
+            },
+            "response": "Pick up the cardboard box on the floor. ",
+            "old_sample_id": 70943,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 134,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cold table on a black stand.  Step Details: {image#1}Step#1: Turn left and take a few step until you're even with the sink on you're right and then turn right and walk to the sink. {image#2} Current Step: ",
+                "images_path": [
+                    "453.jpg",
+                    "454.jpg"
+                ],
+                "combined_1_images": [
+                    "134.jpg"
+                ]
+            },
+            "response": "Get the potato that's in the sink.",
+            "old_sample_id": 72472,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 135,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a slice of cooked potato on the counter.  Step Details: {image#1}Step#1: Turn left, move to the counter left of the sink. {image#2}Step#2: Pick up the knife, on the left, from the counter. {image#3}Step#3: Turn right, move to in front of the refrigerator. {image#4}Step#4: Slice the potato in the refrigerator. {image#5} Current Step: ",
+                "images_path": [
+                    "455.jpg",
+                    "456.jpg",
+                    "457.jpg",
+                    "458.jpg",
+                    "459.jpg"
+                ],
+                "combined_1_images": [
+                    "135.jpg"
+                ]
+            },
+            "response": "Turn left, move to the counter right of the dishwasher.",
+            "old_sample_id": 72830,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 136,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a white spray bottle to the toilet tank lid.  Step Details: {image#1}Step#1: Turn and walk across the room to find the cabinet next to the trash can. {image#2}Step#2: Pick up the white spray bottle next to the box of tissues. {image#3} Current Step: ",
+                "images_path": [
+                    "460.jpg",
+                    "461.jpg",
+                    "462.jpg"
+                ],
+                "combined_1_images": [
+                    "136.jpg"
+                ]
+            },
+            "response": "Turn right and hang another right to reach the toilet.",
+            "old_sample_id": 72993,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 137,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a warm apple in the trash.  Step Details: {image#1}Step#1: Turn around and go forward toward the wall, then turn left and go to the trash bin. {image#2}Step#2: Take the apple from the trash bin. {image#3}Step#3: Turn left and go forward with the counter, then turn left to go to the microwave. {image#4} Current Step: ",
+                "images_path": [
+                    "463.jpg",
+                    "464.jpg",
+                    "465.jpg",
+                    "466.jpg"
+                ],
+                "combined_1_images": [
+                    "137.jpg"
+                ]
+            },
+            "response": "Open the microwave, put the apple inside and heat it up, then take it out.",
+            "old_sample_id": 74583,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 138,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Look at a book by the light of a lamp.  Step Details: {image#1}Step#1: Turn right an walk ahead, then turn left to the table to the right of the bed. {image#2} Current Step: ",
+                "images_path": [
+                    "467.jpg",
+                    "468.jpg"
+                ],
+                "combined_1_images": [
+                    "138.jpg"
+                ]
+            },
+            "response": "Pick up the book on the table.",
+            "old_sample_id": 75439,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 139,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Carry a box while turning on a lamp  Step Details: {image#1}Step#1: Turn right facing the empty box on the red table {image#2}Step#2: Pick up the empty box on top of the table {image#3}Step#3: Carry the box to the corner of the room where the floor lamp is {image#4} Current Step: ",
+                "images_path": [
+                    "469.jpg",
+                    "470.jpg",
+                    "471.jpg",
+                    "472.jpg"
+                ],
+                "combined_1_images": [
+                    "139.jpg"
+                ]
+            },
+            "response": "Turn on the lamp",
+            "old_sample_id": 75682,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 140,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  place a microwaved cup down on the kitchen counter  Step Details: {image#1}Step#1: turn left and walk over to the kitchen sink which is on the left side of the room now, at the end of the room {image#2} Current Step: ",
+                "images_path": [
+                    "473.jpg",
+                    "474.jpg"
+                ],
+                "combined_1_images": [
+                    "140.jpg"
+                ]
+            },
+            "response": "grab a cup out of the kitchen sink",
+            "old_sample_id": 76628,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 141,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Microwave the glass and place it on the kitchen counter.   Step Details: {image#1}Step#1: Turn left and walk towards the kitchen sink, then turn right. {image#2}Step#2: Pick up the brown glass from inside the sink. {image#3} Current Step: ",
+                "images_path": [
+                    "475.jpg",
+                    "476.jpg",
+                    "477.jpg"
+                ],
+                "combined_1_images": [
+                    "141.jpg"
+                ]
+            },
+            "response": "Turn left and walk towards the microwave, then turn right.",
+            "old_sample_id": 76659,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 142,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  examine a pen with a lamp  Step Details: {image#1}Step#1: turn right, take two steps, turn left, walk to wall, turn right, walk to the small table {image#2} Current Step: ",
+                "images_path": [
+                    "478.jpg",
+                    "479.jpg"
+                ],
+                "combined_1_images": [
+                    "142.jpg"
+                ]
+            },
+            "response": "pick up the pen that is on the table",
+            "old_sample_id": 77171,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 143,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Putting a slice of bread on the black table  Step Details: {image#1}Step#1: Head to the right of the white table in front of you {image#2}Step#2: Grab the large knife that is on the table {image#3}Step#3: Cut the loaf of bread into slices {image#4} Current Step: ",
+                "images_path": [
+                    "480.jpg",
+                    "481.jpg",
+                    "482.jpg",
+                    "483.jpg"
+                ],
+                "combined_1_images": [
+                    "143.jpg"
+                ]
+            },
+            "response": "Look down at the table",
+            "old_sample_id": 77285,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 144,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a towel on the counter.  Step Details: {image#1}Step#1: Go right and face the towel hanging to the left of the mirror. {image#2} Current Step: ",
+                "images_path": [
+                    "484.jpg",
+                    "485.jpg"
+                ],
+                "combined_1_images": [
+                    "144.jpg"
+                ]
+            },
+            "response": "Take the towel to the left of the mirror down from the towel ring.",
+            "old_sample_id": 77437,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 145,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  place a cold glass cup in the sink  Step Details: {image#1}Step#1: turn left towards the sink {image#2}Step#2: pick up the glass cup from the sink {image#3} Current Step: ",
+                "images_path": [
+                    "486.jpg",
+                    "487.jpg",
+                    "488.jpg"
+                ],
+                "combined_1_images": [
+                    "145.jpg"
+                ]
+            },
+            "response": "turn around towards the door and then left towards the refrigerator",
+            "old_sample_id": 77878,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 146,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Examine a tennis racket by the light of a desk lamp.  Step Details: {image#1}Step#1: Walk to the tennis racket on the floor to the left of the bed. {image#2}Step#2: Pick up the tennis racket off of the floor. {image#3} Current Step: ",
+                "images_path": [
+                    "489.jpg",
+                    "490.jpg",
+                    "491.jpg"
+                ],
+                "combined_1_images": [
+                    "146.jpg"
+                ]
+            },
+            "response": "Turn around and walk to the lamp on the desk.",
+            "old_sample_id": 78133,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 147,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Throw away a piece of cooked potato.  Step Details: {image#1}Step#1: Turn around and go to face the drying rack on the left side of the sink. {image#2}Step#2: Pick the knife up from the drying rack. {image#3}Step#3: Go to the sink on the right. {image#4} Current Step: ",
+                "images_path": [
+                    "492.jpg",
+                    "493.jpg",
+                    "494.jpg",
+                    "495.jpg"
+                ],
+                "combined_1_images": [
+                    "147.jpg"
+                ]
+            },
+            "response": "Slice the potato that is in the sink.",
+            "old_sample_id": 78614,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 148,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Grab a vase from the dining table and examine the vase under a lamp's light.  Step Details: {image#1}Step#1: Walk from the living room to the dining table on the laptop's side. {image#2}Step#2: Grab the right blue vase off the table. {image#3}Step#3: Walk from the dining table to the left seat. {image#4} Current Step: ",
+                "images_path": [
+                    "496.jpg",
+                    "497.jpg",
+                    "498.jpg",
+                    "499.jpg"
+                ],
+                "combined_1_images": [
+                    "148.jpg"
+                ]
+            },
+            "response": "Turn on the lamp on the left of the seat.",
+            "old_sample_id": 80118,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 149,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  place a cooked tomato in the fridge  Step Details: {image#1}Step#1: move forward to the sink {image#2}Step#2: pick up a knife from the sink {image#3}Step#3: slice the tomato in the sink {image#4} Current Step: ",
+                "images_path": [
+                    "500.jpg",
+                    "501.jpg",
+                    "502.jpg",
+                    "503.jpg"
+                ],
+                "combined_1_images": [
+                    "149.jpg"
+                ]
+            },
+            "response": "drop the knife in the sink",
+            "old_sample_id": 81118,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 150,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a heated egg on the counter.  Step Details: {image#1}Step#1: Go forward and then go right and turn to the right to face the counter with the egg on it. {image#2}Step#2: Pick the egg up from the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "504.jpg",
+                    "505.jpg",
+                    "506.jpg"
+                ],
+                "combined_1_images": [
+                    "150.jpg"
+                ]
+            },
+            "response": "Turn to the right and stand in front of the microwave.",
+            "old_sample_id": 82000,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 151,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  place a plate down on the counter with a knife on the plate  Step Details: {image#1}Step#1: turn around and walk over to the kitchen counter ahead {image#2}Step#2: grab a butter knife off of the counter there {image#3}Step#3: turn right and walk to the fridge at the end of the kitchen counters on the left {image#4} Current Step: ",
+                "images_path": [
+                    "507.jpg",
+                    "508.jpg",
+                    "509.jpg",
+                    "510.jpg"
+                ],
+                "combined_1_images": [
+                    "151.jpg"
+                ]
+            },
+            "response": "place the knife on a plate inside the fridge",
+            "old_sample_id": 82308,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 152,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cold head of lettuce on the table.  Step Details: {image#1}Step#1: Turn left and take a step then turn left and walk to the wall then turn left. {image#2}Step#2: Pick up the head of lettuce that's in front of you. {image#3} Current Step: ",
+                "images_path": [
+                    "511.jpg",
+                    "512.jpg",
+                    "513.jpg"
+                ],
+                "combined_1_images": [
+                    "152.jpg"
+                ]
+            },
+            "response": "Turn left and walk to the fridge that's in the corner to your right and stand in front of it facing it.",
+            "old_sample_id": 82823,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 153,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Slice cabbage, put in a pan, place the pan at the other end of the table  Step Details: {image#1}Step#1: Walk to the other end of the room in the direction of the long white table, hang a right to the small brown table. {image#2}Step#2: Pick up the yellow-handled knife from the back of the brown table. {image#3} Current Step: ",
+                "images_path": [
+                    "514.jpg",
+                    "515.jpg",
+                    "516.jpg"
+                ],
+                "combined_1_images": [
+                    "153.jpg"
+                ]
+            },
+            "response": "Turn and walk to the left end of the long white table where there is a cabbage.",
+            "old_sample_id": 83789,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 154,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Place vegetables to be meal prepped in fridge.  Step Details: {image#1}Step#1: Move forward until you reach the sink on the left.  You will see a black pot.  {image#2}Step#2: Pick up the black pot out of the sink.  {image#3}Step#3: Turn around and cross the room to the fridge {image#4}Step#4: Open the fridge, put the pot in the fridge, close the door.  {image#5} Current Step: ",
+                "images_path": [
+                    "517.jpg",
+                    "518.jpg",
+                    "519.jpg",
+                    "520.jpg",
+                    "521.jpg"
+                ],
+                "combined_1_images": [
+                    "154.jpg"
+                ]
+            },
+            "response": "Turn to the right, and move to the counter on  the right side of the stove. ",
+            "old_sample_id": 84037,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 155,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a heated green cup in a cabinet.  Step Details: {image#1}Step#1: Walk over to the wall, then turn right and walk up to the fridge. {image#2}Step#2: Open the fridge and take the green cup out of the fridge, then close the fridge. {image#3}Step#3: Turn right and walk forward, then turn left to face the microwave. {image#4}Step#4: Put the green cup in the microwave and heat it up for a couple seconds, then take it out and close the microwave. {image#5} Current Step: ",
+                "images_path": [
+                    "522.jpg",
+                    "523.jpg",
+                    "524.jpg",
+                    "525.jpg",
+                    "526.jpg"
+                ],
+                "combined_1_images": [
+                    "155.jpg"
+                ]
+            },
+            "response": "Turn right and walk forward, then hang a right and walk over to the counter.",
+            "old_sample_id": 85649,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 156,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  put empty and full toilet paper rolls on table  Step Details: {image#1}Step#1: turn right, walk towards sink {image#2}Step#2: pick up the toilet paper that is on the back of the toilet {image#3}Step#3: turn around, walk to black table {image#4}Step#4: put the toilet paper on the black table {image#5} Current Step: ",
+                "images_path": [
+                    "527.jpg",
+                    "528.jpg",
+                    "529.jpg",
+                    "530.jpg",
+                    "531.jpg"
+                ],
+                "combined_1_images": [
+                    "156.jpg"
+                ]
+            },
+            "response": "turn around, walk forward, turn right, walk to wall",
+            "old_sample_id": 86055,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 157,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  put a chilled slice of potato on the table  Step Details: {image#1}Step#1: go to the counter to the left of the stove {image#2}Step#2: pick up the knife {image#3}Step#3: take the knife to the table {image#4} Current Step: ",
+                "images_path": [
+                    "532.jpg",
+                    "533.jpg",
+                    "534.jpg",
+                    "535.jpg"
+                ],
+                "combined_1_images": [
+                    "157.jpg"
+                ]
+            },
+            "response": "cut the lettuce with the knife",
+            "old_sample_id": 86324,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 158,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a rinsed piece of potato on the table to the right of the fridge.  Step Details: {image#1}Step#1: Turn around and walk to the yellow knife next to the spatula on the counter. {image#2}Step#2: Pick up the yellow knife next to the spatula on the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "536.jpg",
+                    "537.jpg",
+                    "538.jpg"
+                ],
+                "combined_1_images": [
+                    "158.jpg"
+                ]
+            },
+            "response": "Turn around and walk to the potato on the counter in the opposite corner of the room.",
+            "old_sample_id": 87054,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 159,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place two green bottles into red bin  Step Details: {image#1}Step#1: turn right, go to white dresser with green bottles and candle {image#2}Step#2: pick up green bottle on the left from dresser  {image#3}Step#3: turn left, go to red bin to the left of sink {image#4}Step#4: place green bottle into red bin {image#5} Current Step: ",
+                "images_path": [
+                    "539.jpg",
+                    "540.jpg",
+                    "541.jpg",
+                    "542.jpg",
+                    "543.jpg"
+                ],
+                "combined_1_images": [
+                    "159.jpg"
+                ]
+            },
+            "response": "turn around, go to white dresser with green bottle and candle",
+            "old_sample_id": 87652,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 160,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place two spray bottles into the trash.  Step Details: {image#1}Step#1: Turn right and walk towards the white cabinet. {image#2}Step#2: Pick the left spray bottle up from the white cabinet. {image#3} Current Step: ",
+                "images_path": [
+                    "544.jpg",
+                    "545.jpg",
+                    "546.jpg"
+                ],
+                "combined_1_images": [
+                    "160.jpg"
+                ]
+            },
+            "response": "Turn around, walk towards the shower, then turn right, walk towards the sink.",
+            "old_sample_id": 87655,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 161,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two CDs to the drawer in the end table.   Step Details: {image#1}Step#1: Turn left to go to the arm brown leather arm chair. {image#2} Current Step: ",
+                "images_path": [
+                    "547.jpg",
+                    "548.jpg"
+                ],
+                "combined_1_images": [
+                    "161.jpg"
+                ]
+            },
+            "response": "Pick up the CD on the left front corner.",
+            "old_sample_id": 88368,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 162,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  To look at the CD in the light.  Step Details: {image#1}Step#1: Turn to the left and walk across the room, then turn to the right and face the desk.  {image#2} Current Step: ",
+                "images_path": [
+                    "549.jpg",
+                    "550.jpg"
+                ],
+                "combined_1_images": [
+                    "162.jpg"
+                ]
+            },
+            "response": "Pick up the compact disk on the edge of the yellow desk.",
+            "old_sample_id": 88628,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 163,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Transfer the towels on the towel holders into the tub.  Step Details: {image#1}Step#1: Turn around, take a step forward, and turn right towards the towel holder on the wall in front of you. {image#2}Step#2: Take the towel from the holder. {image#3}Step#3: Turn right to face the tub. {image#4}Step#4: Place the towel in the tub. {image#5} Current Step: ",
+                "images_path": [
+                    "551.jpg",
+                    "552.jpg",
+                    "553.jpg",
+                    "554.jpg",
+                    "555.jpg"
+                ],
+                "combined_1_images": [
+                    "163.jpg"
+                ]
+            },
+            "response": "Turn around and walk towards the towel holder on the wall next to the sink.",
+            "old_sample_id": 90398,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 164,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Warm the bread up in the microwave.  Step Details: {image#1}Step#1: Turn around.  Move towards the door.  At the door turn left to face the fridge. {image#2}Step#2: Grab the bread that is on the top shelf. {image#3}Step#3: Turn left and move to the stove. {image#4} Current Step: ",
+                "images_path": [
+                    "556.jpg",
+                    "557.jpg",
+                    "558.jpg",
+                    "559.jpg"
+                ],
+                "combined_1_images": [
+                    "164.jpg"
+                ]
+            },
+            "response": "Open the microwave.  Put the bread in the microwave.  Turn the microwave on.  When finished take the bread out of the microwave.",
+            "old_sample_id": 90452,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 165,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the glass bowl with spoon in the cupboard.  Step Details: {image#1}Step#1: Take a step forwards and then turn left and head into the kitchen turning to the right after the counter walk towards the corner then finally turn right towards the counter with the red vase. {image#2}Step#2: Pick up the large spoon on the higher part of the counter behind the red vase. {image#3}Step#3: Turn to the left and note the glass bowl on the counter. {image#4} Current Step: ",
+                "images_path": [
+                    "560.jpg",
+                    "561.jpg",
+                    "562.jpg",
+                    "563.jpg"
+                ],
+                "combined_1_images": [
+                    "165.jpg"
+                ]
+            },
+            "response": "Place the spoon in the glass bowl.",
+            "old_sample_id": 90472,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 166,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  put some toilet paper on the toilet paper holder  Step Details: {image#1}Step#1: turn around and move over to the toilet to the right {image#2}Step#2: grab the toilet paper off of the top of the toilet {image#3} Current Step: ",
+                "images_path": [
+                    "564.jpg",
+                    "565.jpg",
+                    "566.jpg"
+                ],
+                "combined_1_images": [
+                    "166.jpg"
+                ]
+            },
+            "response": "put the toilet paper on to the toilet paper holder",
+            "old_sample_id": 93083,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 167,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Placing a cooled tomato slice into a microwave.   Step Details: {image#1}Step#1: Back up, turn to the the right and walk around the island, veering to the right at the end near the refrigerator, and walk to the counter directly to the left of the refrigerator.  {image#2} Current Step: ",
+                "images_path": [
+                    "567.jpg",
+                    "568.jpg"
+                ],
+                "combined_1_images": [
+                    "167.jpg"
+                ]
+            },
+            "response": "Pick up the knife by the lettuce from the counter. ",
+            "old_sample_id": 93358,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 168,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a chilled egg in the left side of the sink.  Step Details: {image#1}Step#1: Go across the room to the sink. {image#2} Current Step: ",
+                "images_path": [
+                    "569.jpg",
+                    "570.jpg"
+                ],
+                "combined_1_images": [
+                    "168.jpg"
+                ]
+            },
+            "response": "Pick up the egg on the back of the sink.",
+            "old_sample_id": 93835,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 169,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a spray bottle from a counter top to a garbage can.  Step Details: {image#1}Step#1: Turn right and walk to the counter top on the right containing two spray bottles. {image#2}Step#2: Pick up the spray bottle on the right. {image#3} Current Step: ",
+                "images_path": [
+                    "571.jpg",
+                    "572.jpg",
+                    "573.jpg"
+                ],
+                "combined_1_images": [
+                    "169.jpg"
+                ]
+            },
+            "response": "Turn around and walk to the garbage can on the floor.",
+            "old_sample_id": 94359,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 170,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the cleaned soap bar in the bathtub  Step Details: {image#1}Step#1: Turn left and walk over to the bathroom sink {image#2}Step#2: Pick up the pink soap bar right of the sink from the counter {image#3}Step#3: Turn left and walk over to the other side of the counter then face back toward the sink {image#4}Step#4: Rinse the soap under water in the sink and remove it {image#5} Current Step: ",
+                "images_path": [
+                    "574.jpg",
+                    "575.jpg",
+                    "576.jpg",
+                    "577.jpg",
+                    "578.jpg"
+                ],
+                "combined_1_images": [
+                    "170.jpg"
+                ]
+            },
+            "response": "Turn right and walk over to the bathtub",
+            "old_sample_id": 94774,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 171,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  place a smart phone on the bed  Step Details: {image#1}Step#1: turn to the left and turn to the left again and go forward to the book case and turn to the right and go forward to the desk {image#2}Step#2: pick up the smart phone from the desk {image#3} Current Step: ",
+                "images_path": [
+                    "579.jpg",
+                    "580.jpg",
+                    "581.jpg"
+                ],
+                "combined_1_images": [
+                    "171.jpg"
+                ]
+            },
+            "response": "turn around to the opposite direction  and step forward and turn to the left and go forward to the bed",
+            "old_sample_id": 96143,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 172,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Chill a slice of lettuce in the refrigerator.   Step Details: {image#1}Step#1: Turn and go to the counter by the microwave. {image#2}Step#2: Pick up the knife on the counter.  {image#3}Step#3: Turn around and go to the round table.  {image#4} Current Step: ",
+                "images_path": [
+                    "582.jpg",
+                    "583.jpg",
+                    "584.jpg",
+                    "585.jpg"
+                ],
+                "combined_1_images": [
+                    "172.jpg"
+                ]
+            },
+            "response": "Slice a head of lettuce on the table.",
+            "old_sample_id": 96230,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 173,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  place two red credit cards on couch by blue pillow  Step Details: {image#1}Step#1: turn left, go to black coffee table with laptop {image#2}Step#2: pick up red credit card to the right of laptop from coffee table {image#3} Current Step: ",
+                "images_path": [
+                    "586.jpg",
+                    "587.jpg",
+                    "588.jpg"
+                ],
+                "combined_1_images": [
+                    "173.jpg"
+                ]
+            },
+            "response": "go to left side of black couch with blue pillow",
+            "old_sample_id": 96279,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 174,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a clean head of lettuce on the counter.  Step Details: {image#1}Step#1: Take three steps forward then turn left and walk to the counter to the left of the fridge. {image#2}Step#2: Pick up the head of lettuce that's in front of you. {image#3} Current Step: ",
+                "images_path": [
+                    "589.jpg",
+                    "590.jpg",
+                    "591.jpg"
+                ],
+                "combined_1_images": [
+                    "174.jpg"
+                ]
+            },
+            "response": "Turn right and walk to the fridge then turn right and walk to the sink.",
+            "old_sample_id": 96593,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 175,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Move two cardboard boxes to a coffee table.  Step Details: {image#1}Step#1: Turn right and begin walking to the pink chair, then hang a right and walk around the coffee table to the large dresser with the television on it. {image#2}Step#2: Pick up the cardboard box on the dresser to the left of the television. {image#3}Step#3: Turn left and walk forward, then turn left and walk up to the side of the coffee table that the couch is on. {image#4}Step#4:  Place the cardboard box on the coffee table in between the statue and laptop. {image#5} Current Step: ",
+                "images_path": [
+                    "592.jpg",
+                    "593.jpg",
+                    "594.jpg",
+                    "595.jpg",
+                    "596.jpg"
+                ],
+                "combined_1_images": [
+                    "175.jpg"
+                ]
+            },
+            "response": "Turn right and begin walking across the room, then hang a right and walk up to the pink chair.",
+            "old_sample_id": 97076,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 176,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  put the wet soap into the waste basket   Step Details: {image#1}Step#1:    turn    and walk to the   toilet    {image#2}Step#2: get the  soap off the back of the toilet {image#3}Step#3: turn and walk to the sink {image#4}Step#4: put the soap into the sink  turn the water on turn the water off pick up the soap {image#5} Current Step: ",
+                "images_path": [
+                    "597.jpg",
+                    "598.jpg",
+                    "599.jpg",
+                    "600.jpg",
+                    "601.jpg"
+                ],
+                "combined_1_images": [
+                    "176.jpg"
+                ]
+            },
+            "response": "turn and face the waste basket  walk to the waste basket",
+            "old_sample_id": 97476,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 177,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the heated glass in the cabinet  Step Details: {image#1}Step#1: Turn left walk few steps then turn right to the toaster {image#2}Step#2: Pick up the glass beside the toaster {image#3}Step#3: Turn right then walk forward head to the microwave {image#4} Current Step: ",
+                "images_path": [
+                    "602.jpg",
+                    "603.jpg",
+                    "604.jpg",
+                    "605.jpg"
+                ],
+                "combined_1_images": [
+                    "177.jpg"
+                ]
+            },
+            "response": "Open then microwave heat the glass then take it out and close the microwave",
+            "old_sample_id": 98771,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 178,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a black pot with a cut up tomato and a knife in it into the fridge.  Step Details: {image#1}Step#1: Turn left and walk to the gray trash can in the corner. {image#2}Step#2: Pick up the tomato from the gray trash can. {image#3} Current Step: ",
+                "images_path": [
+                    "606.jpg",
+                    "607.jpg",
+                    "608.jpg"
+                ],
+                "combined_1_images": [
+                    "178.jpg"
+                ]
+            },
+            "response": "Turn around and walk to the stove.",
+            "old_sample_id": 98805,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 179,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  move the keys from coffee table to ottoman  Step Details: {image#1}Step#1: walk forward to the purple chair, turn right, take two steps, turn right walk a few steps, turn right to face coffee table {image#2}Step#2: pick up the keys that are on the coffee table {image#3}Step#3: turn right, walk towards purple chair and ottoman {image#4} Current Step: ",
+                "images_path": [
+                    "609.jpg",
+                    "610.jpg",
+                    "611.jpg",
+                    "612.jpg"
+                ],
+                "combined_1_images": [
+                    "179.jpg"
+                ]
+            },
+            "response": "put the keys on the purple ottoman",
+            "old_sample_id": 98974,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 180,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Move the keys on the table to the foot rest   Step Details: {image#1}Step#1: Turn right to go to the living and go around to the other side of the coffee table.  {image#2} Current Step: ",
+                "images_path": [
+                    "613.jpg",
+                    "614.jpg"
+                ],
+                "combined_1_images": [
+                    "180.jpg"
+                ]
+            },
+            "response": "Pick up the keys on the coffee table.",
+            "old_sample_id": 98992,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 181,
+            "task_instruction_id": 3,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a bowl with a cell phone in it on the desk.  Step Details: {image#1}Step#1: Turn left and go forward to the desk. {image#2}Step#2: Pick up the cell phone on the desk, next to the lamp. {image#3} Current Step: ",
+                "images_path": [
+                    "615.jpg",
+                    "616.jpg",
+                    "617.jpg"
+                ],
+                "combined_1_images": [
+                    "181.jpg"
+                ]
+            },
+            "response": "Turn around, go straight to the wall, then turn left to face the night stand.",
+            "old_sample_id": 100023,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 182,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a chilled bowl in the cupboard.   Step Details: {image#1}Step#1: Turn around and go to the counter above the dishwasher.  {image#2}Step#2: Open the top cupboard and remove the brown bowl on the left side of the bottom shelf.  {image#3}Step#3: Turn to your right and go to the refrigerator to your immediate right.  {image#4} Current Step: ",
+                "images_path": [
+                    "618.jpg",
+                    "619.jpg",
+                    "620.jpg",
+                    "621.jpg"
+                ],
+                "combined_1_images": [
+                    "182.jpg"
+                ]
+            },
+            "response": "Place the bowl in the refrigerator, on the right shelf, above the potato, wait a moment for the bowl to chill, then remove the bowl from the refrigerator. ",
+            "old_sample_id": 100455,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 183,
+            "task_instruction_id": 6,
+            "task_instance": {
+                "context": "Your Main Goal:  Cut an apple, cook a piece of the apple in a microwave, put the apple slice on the brown shelf.  Step Details: {image#1}Step#1: Turn left and walk to the sink. {image#2}Step#2: Take the knife from the sink. {image#3}Step#3: Turn around and walk to the round brown table in the corner. {image#4} Current Step: ",
+                "images_path": [
+                    "622.jpg",
+                    "623.jpg",
+                    "624.jpg",
+                    "625.jpg"
+                ],
+                "combined_1_images": [
+                    "183.jpg"
+                ]
+            },
+            "response": "Cut the apple on the table into thirds.",
+            "old_sample_id": 100846,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 184,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Move a skillet from the stove to the fridge to the stove.  Step Details: {image#1}Step#1: Turn left and go along the wall toward the fridge. Turn right at the fridge and go forward until you come to the stove. {image#2}Step#2: Pick up the skillet from the back left burner of the stove. {image#3}Step#3: Turn around to your left and go back to the fridge. Turn right to fact the fridge. {image#4}Step#4: Open the fridge and place the skillet on the top right shelf, with the handle pointing to the right and close the fridge. {image#5} Current Step: ",
+                "images_path": [
+                    "626.jpg",
+                    "627.jpg",
+                    "628.jpg",
+                    "629.jpg",
+                    "630.jpg"
+                ],
+                "combined_1_images": [
+                    "184.jpg"
+                ]
+            },
+            "response": "Take the skillet back out of the fridge, turn right and carry it to the stove.",
+            "old_sample_id": 102002,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 185,
+            "task_instruction_id": 7,
+            "task_instance": {
+                "context": "Your Main Goal:  Look at the keys under the light  Step Details: {image#1}Step#1: Go around the coffee table to the book shelf across the room. {image#2}Step#2: Pick up the keys from the top of the book shelf. {image#3} Current Step: ",
+                "images_path": [
+                    "631.jpg",
+                    "632.jpg",
+                    "633.jpg"
+                ],
+                "combined_1_images": [
+                    "185.jpg"
+                ]
+            },
+            "response": "Turn right to go to the front of the lamp.",
+            "old_sample_id": 102213,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 186,
+            "task_instruction_id": 0,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a chilled loaf of bread near the toaster.  Step Details: {image#1}Step#1: Turn right, go to the window, and turn left toward the small gray counter. {image#2} Current Step: ",
+                "images_path": [
+                    "634.jpg",
+                    "635.jpg"
+                ],
+                "combined_1_images": [
+                    "186.jpg"
+                ]
+            },
+            "response": "Take the bread from the small gray counter.",
+            "old_sample_id": 102330,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 187,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  place a disk on a shelf  Step Details: {image#1}Step#1: move forward towards the self  {image#2}Step#2: pick up the disk from the shelf {image#3} Current Step: ",
+                "images_path": [
+                    "636.jpg",
+                    "637.jpg",
+                    "638.jpg"
+                ],
+                "combined_1_images": [
+                    "187.jpg"
+                ]
+            },
+            "response": "turn left towards the shelf",
+            "old_sample_id": 102684,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 188,
+            "task_instruction_id": 1,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a chilled egg in the sink.  Step Details: {image#1}Step#1: Go straight and then to the right to reach the microwave on the counter. {image#2}Step#2: Take the egg from the microwave. {image#3}Step#3: Turn to the left and go to the fridge. {image#4} Current Step: ",
+                "images_path": [
+                    "639.jpg",
+                    "640.jpg",
+                    "641.jpg",
+                    "642.jpg"
+                ],
+                "combined_1_images": [
+                    "188.jpg"
+                ]
+            },
+            "response": "Chill the egg in the fridge. ",
+            "old_sample_id": 103031,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 189,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  move the credit cards to the chair.  Step Details: {image#1}Step#1: Move to go face the round black table on the left of the leftmost chair. {image#2}Step#2: Pick up the red credit card that's on the table behind the lamp. {image#3}Step#3: Bring the credit card with you and face the chair that's just to the right of the table you picked it up from. {image#4}Step#4: Put the credit card down on the seat of the chair. {image#5} Current Step: ",
+                "images_path": [
+                    "643.jpg",
+                    "644.jpg",
+                    "645.jpg",
+                    "646.jpg",
+                    "647.jpg"
+                ],
+                "combined_1_images": [
+                    "189.jpg"
+                ]
+            },
+            "response": "Turn around and face the coffee table so that the remote control is in front of the golden statue when you look at it.",
+            "old_sample_id": 103659,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 190,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Turn on the lamp while holding the remote control.  Step Details: {image#1}Step#1: Turn around and walk toward the table, then move forward toward the chair, then turn left. {image#2}Step#2: Pick up the remote that is laying on the chair. {image#3}Step#3: Turn left and walk forward, then turn around to face the lamp. {image#4} Current Step: ",
+                "images_path": [
+                    "648.jpg",
+                    "649.jpg",
+                    "650.jpg",
+                    "651.jpg"
+                ],
+                "combined_1_images": [
+                    "190.jpg"
+                ]
+            },
+            "response": "Turn on the lamp. ",
+            "old_sample_id": 103869,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 191,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Prop a racquet against the wall on top of a nightstand.  Step Details: {image#1}Step#1: Turn 90 degrees to your right and look down at the floor. {image#2} Current Step: ",
+                "images_path": [
+                    "652.jpg",
+                    "653.jpg"
+                ],
+                "combined_1_images": [
+                    "191.jpg"
+                ]
+            },
+            "response": "Pick up the racquet from the floor in the corner.",
+            "old_sample_id": 104408,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 192,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a cleaned head of lettuce in a refrigerator.  Step Details: {image#1}Step#1: Turn left and walk across the room to the lettuce on the counter, then turn right and walk forward to the other counter containing lettuce on it. {image#2}Step#2: Pick up the lettuce from the counter. {image#3} Current Step: ",
+                "images_path": [
+                    "654.jpg",
+                    "655.jpg",
+                    "656.jpg"
+                ],
+                "combined_1_images": [
+                    "192.jpg"
+                ]
+            },
+            "response": "Turn right and walk to the sink on the left.",
+            "old_sample_id": 104502,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 193,
+            "task_instruction_id": 5,
+            "task_instance": {
+                "context": "Your Main Goal:  Place box with credit card on counter with monitor  Step Details: {image#1}Step#1: go to red couch to the right {image#2}Step#2: pick up red credit card next to yellow pillow on right end of couch {image#3}Step#3: go to box on couch to the left {image#4}Step#4: place credit card in box on the couch {image#5} Current Step: ",
+                "images_path": [
+                    "657.jpg",
+                    "658.jpg",
+                    "659.jpg",
+                    "660.jpg",
+                    "661.jpg"
+                ],
+                "combined_1_images": [
+                    "193.jpg"
+                ]
+            },
+            "response": "pick up box with credit card",
+            "old_sample_id": 104971,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 194,
+            "task_instruction_id": 4,
+            "task_instance": {
+                "context": "Your Main Goal:  Fill a pan with water from the kitchen sink  Step Details: {image#1}Step#1: turn right and move towards the window, then turn left around the middle table and face it {image#2}Step#2: pick up the medium sized pan on the table in front of the milk bottle {image#3}Step#3: turn around and face the sink {image#4} Current Step: ",
+                "images_path": [
+                    "662.jpg",
+                    "663.jpg",
+                    "664.jpg",
+                    "665.jpg"
+                ],
+                "combined_1_images": [
+                    "194.jpg"
+                ]
+            },
+            "response": "place the pan in the kitchen sink, then turn the sink on and fill the pan with water. Pick it up out of the sink",
+            "old_sample_id": 105285,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 195,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Put the chilled tomato in the trash bin  Step Details: {image#1}Step#1: Turn right then head to the trash bin  {image#2}Step#2: Pick up the tomato in the trash bin {image#3}Step#3: Turn right then head to the fridge {image#4} Current Step: ",
+                "images_path": [
+                    "666.jpg",
+                    "667.jpg",
+                    "668.jpg",
+                    "669.jpg"
+                ],
+                "combined_1_images": [
+                    "195.jpg"
+                ]
+            },
+            "response": "Open the fridge chill the tomato take it out then close the fridge",
+            "old_sample_id": 105434,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 196,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Cut a head of lettuce.  Step Details: {image#1}Step#1: Turn around and walk to the table. {image#2}Step#2: Pick up the knife. {image#3}Step#3: Take a step left. {image#4} Current Step: ",
+                "images_path": [
+                    "670.jpg",
+                    "671.jpg",
+                    "672.jpg",
+                    "673.jpg"
+                ],
+                "combined_1_images": [
+                    "196.jpg"
+                ]
+            },
+            "response": "Cut the head of lettuce into pieces.",
+            "old_sample_id": 105547,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 197,
+            "task_instruction_id": 9,
+            "task_instance": {
+                "context": "Your Main Goal:  Put a pan with a golden spoon in it in the sink.  Step Details: {image#1}Step#1: Turn around and walk up to the wall, the turn right and walk across the room to the kitchen counter. {image#2} Current Step: ",
+                "images_path": [
+                    "674.jpg",
+                    "675.jpg"
+                ],
+                "combined_1_images": [
+                    "197.jpg"
+                ]
+            },
+            "response": "Open the leftmost cabinet door under the counter in front of you and remove the golden spoon with a blue handle, then close the door.",
+            "old_sample_id": 105608,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 198,
+            "task_instruction_id": 8,
+            "task_instance": {
+                "context": "Your Main Goal:  Place a candle on the toilet cistern.  Step Details: {image#1}Step#1: Turn left and move to the sink to the left of the toilet brush in the corner of the room. {image#2}Step#2: Open the vanity cabinet door to the left of the toilet brush, pick up the light green candle from the cabinet, then close the cabinet door. {image#3}Step#3: Turn left and move to the right side of the toilet next to the red rubbish bin. {image#4} Current Step: ",
+                "images_path": [
+                    "676.jpg",
+                    "677.jpg",
+                    "678.jpg",
+                    "679.jpg"
+                ],
+                "combined_1_images": [
+                    "198.jpg"
+                ]
+            },
+            "response": "Place the candle to the left of the blue spray bottle on top of the toilet cistern.",
+            "old_sample_id": 105739,
+            "image_quantity_level": "Few"
+        },
+        {
+            "sample_id": 199,
+            "task_instruction_id": 2,
+            "task_instance": {
+                "context": "Your Main Goal:  Pick up the empty box from the couch. place it on the black armchair.  Step Details: {image#1}Step#1: Walk towards the couch on the left and stand in front of the empty box. {image#2}Step#2: Pick up the empty box from the couch. {image#3} Current Step: ",
+                "images_path": [
+                    "680.jpg",
+                    "681.jpg",
+                    "682.jpg"
+                ],
+                "combined_1_images": [
+                    "199.jpg"
+                ]
+            },
+            "response": "Turn around and walk towards the black armchair, standing in front of it.",
+            "old_sample_id": 107134,
+            "image_quantity_level": "Few"
+        }
+    ]
+}
