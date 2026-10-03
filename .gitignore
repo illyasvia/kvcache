@@ -5,6 +5,11 @@ __pycache__/
 # 虚拟环境（1.2G，按 requirements.txt 重建）
 .venv/
 
+# 本地环境与动态服务器连接信息（可能包含凭据，禁止提交）
+.env
+.env.*
+!.env.example
+
 # PyCharm 本地状态
 .idea/
 

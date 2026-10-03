@@ -50,7 +50,9 @@ class Qwen3vl:
 
         return text[0]
 
-    def process_multiple_multimodel(self,prompt, images, instruction = None,role= None,talker_max_new_tokens=None, thinker_max_new_tokens=None):
+    def process_multiple_multimodel(self, prompt, images, instruction=None, role=None,
+                                    talker_max_new_tokens=None, thinker_max_new_tokens=None,
+                                    max_new_tokens=None):
         if role is None:
             role = "You are a helpful assistant."
         messages = [{"role": "system", "content": [
@@ -64,16 +66,17 @@ class Qwen3vl:
         inputs = self.processor.apply_chat_template(messages,tokenize=True,add_generation_prompt=True,return_dict=True,return_tensors="pt")
         device = next(self.model.parameters()).device  
         inputs = {k: v.to(device) for k, v in inputs.items()}
-        if "thinking" in self.model_path.lower():
-            generated_ids = self.model.generate(**inputs, max_new_tokens=512)
-        else:
-            generated_ids = self.model.generate(**inputs, max_new_tokens=256)
+        if max_new_tokens is None:
+            max_new_tokens = 512 if "thinking" in self.model_path.lower() else 256
+        generated_ids = self.model.generate(**inputs, max_new_tokens=max_new_tokens)
         # import ipdb; ipdb.set_trace()
         generated_ids_trimmed = [out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs['input_ids'], generated_ids)]
         output_text = self.processor.batch_decode(generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False)
         return output_text
 
-    def process_multimodel(self,prompt, image, instruction = None, role = None,talker_max_new_tokens=None, thinker_max_new_tokens=None):
+    def process_multimodel(self, prompt, image, instruction=None, role=None,
+                           talker_max_new_tokens=None, thinker_max_new_tokens=None,
+                           max_new_tokens=None):
         if role is None:
             role = "You are a helpful assistant."
         messages = [{"role": "system", "content": [
@@ -86,10 +89,9 @@ class Qwen3vl:
         inputs = self.processor.apply_chat_template(messages,tokenize=True,add_generation_prompt=True,return_dict=True,return_tensors="pt")
         device = next(self.model.parameters()).device  
         inputs = {k: v.to(device) for k, v in inputs.items()}
-        if "thinking" in self.model_path.lower():
-            generated_ids = self.model.generate(**inputs, max_new_tokens=512)
-        else:
-            generated_ids = self.model.generate(**inputs, max_new_tokens=256)
+        if max_new_tokens is None:
+            max_new_tokens = 512 if "thinking" in self.model_path.lower() else 256
+        generated_ids = self.model.generate(**inputs, max_new_tokens=max_new_tokens)
         # import ipdb; ipdb.set_trace()
         generated_ids_trimmed = [out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs['input_ids'], generated_ids)]
         output_text = self.processor.batch_decode(generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False)
