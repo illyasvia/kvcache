@@ -1,0 +1,23 @@
+{
+  "dataset": "opencompass/NeedleBench",
+  "revision": "9f76ad26e7699d914722a41924171ee1022c426f",
+  "version": "NeedleBench V2",
+  "task": "single-needle retrieval",
+  "tokenizer_model": "gpt-4",
+  "context_lengths": [
+    1000000
+  ],
+  "depths": [
+    0,
+    50,
+    100
+  ],
+  "num_repeats_per_file": 10,
+  "language": "English",
+  "length_buffer": 3000,
+  "files": [
+    "/Users/reimen/PycharmProjects/token/dataset/needlebench_v2/Length1000000Depth0_origin_en_1000k.json",
+    "/Users/reimen/PycharmProjects/token/dataset/needlebench_v2/Length1000000Depth50_origin_en_1000k.json",
+    "/Users/reimen/PycharmProjects/token/dataset/needlebench_v2/Length1000000Depth100_origin_en_1000k.json"
+  ]
+}

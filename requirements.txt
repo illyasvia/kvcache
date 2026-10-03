@@ -43,3 +43,8 @@ pillow>=10.0.0
 
 # main.py 进度条
 tqdm>=4.66.0
+
+# LongLLMLingua 输入级 prompt 压缩（仅在 --prompt_compression longllmlingua 时加载）
+llmlingua==0.2.2
+tiktoken>=0.7.0
+nltk>=3.8.0

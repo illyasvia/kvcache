@@ -711,6 +711,10 @@ class Qwen3_5Attention(nn.Module):
             **kwargs,
         )
 
+        h2o_controller = getattr(self, "h2o_controller", None)
+        if h2o_controller is not None:
+            h2o_controller.update(self.layer_idx, past_key_values, attn_weights)
+
         attn_output = attn_output.reshape(*input_shape, -1).contiguous()
         attn_output = attn_output * torch.sigmoid(gate)
 

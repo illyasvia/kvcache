@@ -1,11 +1,14 @@
 import sys
 
-from model.qwen35.v451_modeling_qwen35 import Qwen3_5ForConditionalGeneration
+from compression.h2o import H2OConfig, H2OController
+from model.qwen35.v451_modeling_qwen35 import (
+    Qwen3_5Attention,
+    Qwen3_5ForConditionalGeneration,
+)
 
 sys.path.append("../")
 
 from transformers import AutoProcessor, AutoTokenizer
-from transformers.cache_utils import DynamicCache
 from transformers.utils import is_flash_attn_2_available
 import torch
 from transformers import BitsAndBytesConfig
@@ -31,29 +34,74 @@ def default_device():
         return "mps"
     return "cpu"
 
+
+def device_allocated_memory():
+    """获取当前设备分配内存，用于在分块循环内采样峰值。"""
+    if torch.cuda.is_available():
+        return int(torch.cuda.memory_allocated())
+    if torch.backends.mps.is_available():
+        return int(torch.mps.driver_allocated_memory())
+    return 0
+
+
 class Qwen35:
-    def __init__(self, model_path, kv_mode='origin', hh_ratio=0.1, recent_ratio=0.1, hh_layer=1,
+    def __init__(self, model_path, kv_mode='origin', h2o_heavy_hitter_size=1024,
+                 h2o_recent_size=1024, h2o_chunk_size=1024, prefill_chunk_size=512,
                  input_keep_ratio=0.4, input_block_size=64, input_initial_tokens=64,
                  input_query_tokens=256, input_relevance_weight=0.7,
-                 attn_implementation=None):
+                 attn_implementation=None, input_compressor=None):
+        if kv_mode not in {'origin', 'h2o'}:
+            raise ValueError("kv_mode 必须是 origin 或 h2o")
+        if prefill_chunk_size <= 0:
+            raise ValueError("prefill_chunk_size 必须大于 0")
+        if kv_mode == 'h2o':
+            if h2o_chunk_size <= 0:
+                raise ValueError("h2o_chunk_size 必须大于 0")
+            if attn_implementation not in {None, 'eager'}:
+                raise ValueError("H2O 需要 eager attention 以获取真实 attention score")
+            h2o_config = H2OConfig(
+                heavy_hitter_size=h2o_heavy_hitter_size,
+                recent_size=h2o_recent_size,
+            )
+            h2o_config.validate()
+        else:
+            h2o_config = None
+
         self.model_path = model_path
+        self.kv_mode = kv_mode
+        self.h2o_chunk_size = h2o_chunk_size
+        self.prefill_chunk_size = prefill_chunk_size
+
         # accelerate 的 device_map="auto" 分发只在 CUDA 环境可靠，MPS 上会段错误，
         # 因此非 CUDA 环境先加载到 CPU，再整体搬到目标设备。
         device = default_device()
+        selected_attention = 'eager' if kv_mode == 'h2o' else (
+            attn_implementation or default_attn_implementation()
+        )
         self.model = Qwen3_5ForConditionalGeneration.from_pretrained(
             model_path,
             dtype='auto',
             device_map="auto" if device == "cuda" else None,
             # quantization_config=quantization_config,
             trust_remote_code=True,
-            attn_implementation=attn_implementation or default_attn_implementation(),
+            attn_implementation=selected_attention,
         ).eval()
         if device != "cuda":
             self.model = self.model.to(device)
-        self.kv_mode = kv_mode
-        # 输入压缩器尚未接入，置空表示 process() 走不压缩输入的常规流程
-        self.input_compressor = None
+
+        self.h2o_controller = H2OController(h2o_config) if h2o_config is not None else None
+        if self.h2o_controller is not None:
+            for module in self.model.modules():
+                if isinstance(module, Qwen3_5Attention):
+                    module.h2o_controller = self.h2o_controller
+
+        # 输入压缩在 chat template 之前执行，以保留 system/user/control token。
+        self.input_compressor = input_compressor
         self.last_compression_info = None
+        self.last_h2o_info = None
+        self.last_input_tokens = 0
+        self.last_output_tokens = 0
+        self.last_peak_device_memory_bytes = 0
         self.input_compress_config = {
             'keep_ratio': input_keep_ratio,
             'block_size': input_block_size,
@@ -75,6 +123,26 @@ class Qwen35:
             chunk_size: 分块大小。None 表示自动选择（短输入直接推理，长输入分块）。
                         设置为具体数字（如 4096、8192）则强制分块。
         """
+        self.last_compression_info = None
+        self.last_h2o_info = None
+        self.last_input_tokens = 0
+        self.last_output_tokens = 0
+        self.last_peak_device_memory_bytes = device_allocated_memory()
+        if self.h2o_controller is not None:
+            self.h2o_controller.reset()
+
+        compression_result = None
+        if self.input_compressor is not None:
+            compression_result = self.input_compressor.compress(prompt)
+            prompt = compression_result.compressed_prompt
+            self.last_compression_info = compression_result.info
+            print(
+                "LongLLMLingua 输入压缩: "
+                f"{compression_result.origin_tokens} -> "
+                f"{compression_result.compressed_tokens} tokens "
+                f"({compression_result.ratio:.2f}x)"
+            )
+
         conversation = [
             {"role": "system", "content": "You are an efficient assistant. For any question posed by the user, do not perform or display any form of chain-of-thought reasoning or process. Provide only the final answer directly, without including <thought> tags or any intermediate steps. The output format should contain only the answer itself."},
             {"role": "user", "content": prompt},
@@ -84,37 +152,37 @@ class Qwen35:
             return_tensors="pt", max_length=1000000, truncation=True, enable_thinking=False)
         inputs = inputs.to(self.model.device)
         token_count = inputs.input_ids.shape[1]
-        print(f"输入文本token数量: {token_count}")
+        self.last_input_tokens = token_count
+        print(f"输入模型的token数量: {token_count}")
 
-        # input_compression 模式：在 prefill/decoding 之前压缩输入 token 序列，
-        # 剪短输入模型的序列长度，只保留关键信息，随后走正常 generate 流程
-        if self.input_compressor is not None:
-            result = self.input_compressor.compress(inputs.input_ids)
-            inputs["input_ids"] = result.pruned_input_ids
-            inputs["attention_mask"] = torch.ones_like(result.pruned_input_ids)
-            token_count = inputs.input_ids.shape[1]
-            self.last_compression_info = dict(result.info)
-            print(f"压缩后token数量: {token_count}")
-            # 压缩后走下方通用流程：短序列直接 generate，长序列分块 prefill。
-            # input_compression 模式下 _process_chunked 不会再做任何 KV 驱逐
-            # （见 _process_chunked 中仅对 origin 调用 _compress_kv_cache），
-            # 因此分块只用于降低峰值显存，结果与一次性 prefill 等价。
-
-        # 自动选择是否分块：使用 KV 压缩模式（非 origin）且输入较长时使用分块 prefill 以避免 OOM
-        use_chunked = False
-        if chunk_size is not None:
-            use_chunked = True
-        elif self.kv_mode != 'origin' and token_count > 8192:
-            use_chunked = True
-            chunk_size = 4096
+        # 长输入统一走显式分块 prefill，避免标准 SDPA 构造超大注意力矩阵。
+        # H2O 另用自己的 chunk 配置，并在每次 forward 后淘汰 KV cache。
+        use_chunked = (
+            self.kv_mode == 'h2o'
+            or chunk_size is not None
+            or token_count > self.prefill_chunk_size
+        )
+        if chunk_size is None:
+            chunk_size = (
+                self.h2o_chunk_size if self.kv_mode == 'h2o'
+                else self.prefill_chunk_size
+            )
 
         if use_chunked:
-            return self._process_chunked(inputs, max_new_tokens, chunk_size)
+            text = self._process_chunked(inputs, max_new_tokens, chunk_size)
         else:
             output_ids = self.model.generate(**inputs, max_new_tokens=max_new_tokens)
             generated_ids_trimmed = [out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, output_ids)]
+            self.last_output_tokens = len(generated_ids_trimmed[0])
             text = self.processor.batch_decode(generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
-            return text
+
+        if compression_result is not None:
+            recovered_text = self.input_compressor.recover(compression_result, text)
+            self.last_compression_info["response_recovered"] = recovered_text != text
+            text = recovered_text
+        if self.h2o_controller is not None:
+            self.last_h2o_info = self.h2o_controller.stats
+        return text
 
     def process_multimodel(self, prompt, image, instruction=None, role=None, max_new_tokens=256):
         """
@@ -176,76 +244,12 @@ class Qwen35:
         output_text = self.processor.batch_decode(generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False)
         return output_text
 
-    def _compress_kv_cache(self, past_key_values, hh_ratio=0.2, recent_ratio=0.2):
-        """
-        压缩 KV Cache：保留最近 recent_ratio 比例的 token + key L2 norm 最高的 hh_ratio 比例的 token。
-        key 的 L2 norm 作为 attention weight 的近似重要性指标。
-
-        Args:
-            past_key_values: DynamicCache 对象
-            hh_ratio: heavy-hitter 比例（按 key norm 选择最重要的 token）
-            recent_ratio: 最近 token 保留比例
-        """
-        num_layers = len(past_key_values.layers)
-
-        for layer_idx in range(num_layers):
-            layer_cache = past_key_values.layers[layer_idx]
-
-            # 跳过 linear attention 层（没有 keys/values 属性）
-            if not hasattr(layer_cache, 'keys') or layer_cache.keys is None:
-                continue
-
-            key_states = layer_cache.keys  # [bsz, num_heads, seq_len, head_dim]
-            value_states = layer_cache.values
-
-            # 跳过非标准形状的 cache
-            if key_states.dim() != 4:
-                continue
-
-            bsz, num_heads, seq_len, head_dim = key_states.shape
-            hh_size = int(seq_len * hh_ratio)
-            recent_size = int(seq_len * recent_ratio)
-            cache_size = hh_size + recent_size
-
-            if seq_len <= cache_size:
-                continue
-
-            # 使用 key 的 L2 norm 作为重要性分数（近似 attention weight）
-            # [bsz, num_heads, seq_len]
-            key_norm = torch.norm(key_states, p=2, dim=-1)
-
-            # 在非 recent 区域选择 top-k（按 key norm）
-            select_scores = key_norm[:, :, :seq_len - recent_size]  # [bsz, num_heads, seq_len - recent_size]
-            _, keep_topk = torch.topk(select_scores, hh_size, dim=-1)  # [bsz, num_heads, hh_size]
-            keep_topk = keep_topk.sort(dim=-1).values
-
-            # recent token 的索引
-            keep_recent = torch.arange(
-                seq_len - recent_size, seq_len,
-                device=key_states.device
-            ).unsqueeze(0).unsqueeze(0).expand(bsz, num_heads, -1)  # [bsz, num_heads, recent_size]
-
-            # 合并索引
-            keep_idx = torch.cat([keep_topk, keep_recent], dim=-1)  # [bsz, num_heads, cache_size]
-
-            # 使用 gather 选择保留的 token
-            keep_idx_expanded = keep_idx.unsqueeze(-1).expand(-1, -1, -1, head_dim)  # [bsz, num_heads, cache_size, head_dim]
-            new_key_states = torch.gather(key_states, 2, keep_idx_expanded)
-            new_value_states = torch.gather(value_states, 2, keep_idx_expanded)
-
-            past_key_values.layers[layer_idx].keys = new_key_states
-            past_key_values.layers[layer_idx].values = new_value_states
-
-        return past_key_values
-
     @torch.no_grad()
     def _process_chunked(self, inputs, max_new_tokens=32768, chunk_size=8192):
         """
         分块 Prefill + 自回归生成。
-        将长输入分成多个 chunk 逐步处理，每个 chunk 后进行 KV Cache 压缩，
-        从而将内存使用量控制在可接受范围内。
-
-        压缩策略：每个 chunk 后保留最近 20% + key norm 最高的 20%（共 40%）。
+        H2O 模式在每个 full-attention 层累计真实 attention score，
+        并在 prefill 与 decoding 的每次 forward 后执行固定预算淘汰。
 
         对于 1M token 输入：
         - 注意力矩阵从 [1, heads, 1M, 1M]（不可能）
@@ -295,11 +299,10 @@ class Qwen35:
             )
 
             past_key_values = outputs.past_key_values
-
-            # 当使用 H2O/StreamingLLM 等模式时，层内 eviction 已自动在 forward 中执行，
-            # 无需额外压缩；仅在 origin 模式的分块 prefill 中使用通用压缩
-            if self.kv_mode == 'origin':
-                past_key_values = self._compress_kv_cache(past_key_values, hh_ratio=0.2, recent_ratio=0.2)
+            self.last_peak_device_memory_bytes = max(
+                self.last_peak_device_memory_bytes,
+                device_allocated_memory(),
+            )
 
             if (i + 1) % 10 == 0 or i == num_chunks - 1:
                 current_cache_len = past_key_values.get_seq_length()
@@ -322,8 +325,8 @@ class Qwen35:
         for step in range(max_new_tokens):
             generated_ids.append(next_token_id.item())
 
-            # 检查是否生成了结束符
-            if next_token_id.item() in eos_token_ids:
+            # 已生成结束符或达到预算时，不再执行多余的下一 token forward。
+            if next_token_id.item() in eos_token_ids or step == max_new_tokens - 1:
                 break
 
             # 准备下一步的输入
@@ -346,10 +349,15 @@ class Qwen35:
             )
 
             past_key_values = outputs.past_key_values
+            self.last_peak_device_memory_bytes = max(
+                self.last_peak_device_memory_bytes,
+                device_allocated_memory(),
+            )
             next_token_logits = outputs.logits[:, -1, :]
             next_token_id = torch.argmax(next_token_logits, dim=-1, keepdim=True)
 
         # 解码生成的 token
+        self.last_output_tokens = len(generated_ids)
         text = self.tokenizer.decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)
         print(f"生成完成, 共生成 {len(generated_ids)} 个 token")
         return text
